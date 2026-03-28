@@ -1,0 +1,19 @@
+@import './styles/fonts.css';
+@import './styles/tailwind.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Allow vertical page scroll; only clip horizontal overflow from wide absolute layers */
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Brand wordmark: Sarina 400 everywhere "Continuum" appears */
+.font-continuum {
+  font-family: 'Sarina', sans-serif;
+  font-weight: 400;
+}
