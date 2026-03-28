@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import clsx from "clsx";
 import { postWaitlistSignup } from "@/api/waitlist";
+import { scrollToWaitlist } from "@/lib/scrollToWaitlist";
 import svgPaths from "./landing-svg";
 
 function LandingWaitlistForm() {
@@ -207,14 +208,6 @@ function LucideChevronDownBackgroundImage({ children }: React.PropsWithChildren)
 type ComponentBackgroundImageAndText1Props = {
   text: string;
 };
-
-function scrollToWaitlist() {
-  const el = document.getElementById("landing-waitlist");
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth" });
-    history.replaceState(null, "", window.location.pathname);
-  }
-}
 
 function ComponentBackgroundImageAndText1({ text }: ComponentBackgroundImageAndText1Props) {
   return (
@@ -423,14 +416,6 @@ function ComponentBackgroundImageAndText({ text, additionalClassNames = "", asLi
 }
 
 export default function LandingPage() {
-  useEffect(() => {
-    if (window.location.hash) {
-      const el = document.querySelector(window.location.hash);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-      history.replaceState(null, "", window.location.pathname);
-    }
-  }, []);
-
   return (
     <div
       className="relative min-h-[2800px] w-full overflow-x-hidden bg-[#f9fafb]"
