@@ -534,7 +534,7 @@ export default function LandingPage() {
       </div>
       <div
         id="landing-features"
-        className="-translate-x-1/2 absolute content-start flex flex-wrap gap-[12px] items-start left-[calc(50%+12.5px)] shadow-[209px_356px_116px_0px_rgba(26,59,84,0),134px_228px_106px_0px_rgba(26,59,84,0.01),75px_128px_89px_0px_rgba(26,59,84,0.02),33px_57px_66px_0px_rgba(26,59,84,0.04),8px_14px_36px_0px_rgba(26,59,84,0.05)] top-[1518px] w-[1187px] scroll-mt-28"
+        className="-translate-x-1/2 absolute content-start flex flex-wrap gap-[12px] items-start left-[calc(50%+12.5px)] top-[1518px] w-[1187px] scroll-mt-28"
       >
         <div className="content-stretch flex flex-col gap-[10px] h-[564px] items-center overflow-clip p-[48px] relative rounded-[36px] shadow-[0px_39px_11px_0px_rgba(181,181,181,0),0px_25px_10px_0px_rgba(181,181,181,0.04),0px_14px_8px_0px_rgba(181,181,181,0.12),0px_6px_6px_0px_rgba(181,181,181,0.2),0px_2px_3px_0px_rgba(181,181,181,0.24)] shrink-0 w-[700px]" style={{ backgroundImage: "linear-gradient(rgba(178, 230, 247, 0.48) 0%, rgba(253, 251, 247, 0.48) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}>
           <div className="-translate-x-1/2 absolute left-1/2 size-[700px] top-[40px]">

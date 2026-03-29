@@ -2397,7 +2397,7 @@ function Frame132() {
 
 function Frame111() {
   return (
-    <div className="h-[141.5px] relative shrink-0 overflow-hidden w-[283px]">
+    <div className="h-[141.5px] relative shrink-0 w-[283px] overflow-visible">
       <div className="absolute inset-[-4.85%_-2.43%]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 296.734 155.234">
           <g id="Frame 273">
