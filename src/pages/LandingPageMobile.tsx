@@ -197,9 +197,9 @@ function Frame4() {
 
 function Frame136() {
   return (
-    <div className="absolute content-stretch flex items-center left-[159px] top-[1794px]">
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#eb4335] left-1/2 mix-blend-color-burn rounded-[4px] size-[8px] top-1/2" />
-      <div className="bg-[#eb4335] rounded-[999px] shrink-0 size-[2px]" />
+    <div className="absolute left-[159px] top-[1794px] flex size-[8px] items-center justify-center">
+      <span className="absolute inset-0 rounded-full bg-white border border-[#eb4335]" aria-hidden />
+      <span className="relative size-[3px] shrink-0 rounded-none bg-[#eb4335]" aria-hidden />
     </div>
   );
 }
@@ -254,9 +254,9 @@ function Frame118() {
 function MobileTag({ text }: { text: string }) {
   return (
     <div className="bg-[rgba(255,255,255,0.2)] content-stretch flex gap-[7.596px] items-center px-[10.128px] py-[5.064px] relative rounded-[62.665px] shrink-0">
-      <div className="content-stretch flex items-center relative shrink-0">
-        <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#eb4335] left-1/2 mix-blend-color-burn rounded-[5.064px] size-[10.128px] top-1/2" />
-        <div className="bg-[#eb4335] rounded-[1264.692px] shrink-0 size-[2.532px]" />
+      <div className="relative flex shrink-0 size-[10.128px] items-center justify-center">
+        <span className="absolute inset-0 rounded-full bg-white border border-[#eb4335]" aria-hidden />
+        <span className="relative size-[4px] shrink-0 rounded-none bg-[#eb4335]" aria-hidden />
       </div>
       <p className="font-['Satoshi:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#606d76] text-[8.862px] whitespace-nowrap">{text}</p>
     </div>
