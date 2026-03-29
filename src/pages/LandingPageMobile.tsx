@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import svgPaths from "./landing-mobile-svg";
 import { postWaitlistSignup } from "@/api/waitlist";
 import { scrollToWaitlist } from "@/lib/scrollToWaitlist";
@@ -2329,51 +2329,45 @@ function Frame132() {
   );
 }
 
-function Frame111() {
-  return (
-    <div className="h-[141.5px] relative shrink-0 w-[283px] overflow-visible">
-      <div className="absolute inset-[-4.85%_-2.43%]">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 296.734 155.234">
-          <g id="Frame 273">
-            <path d={svgPaths.p2dadad00} id="Ellipse 6" stroke="var(--stroke-0, #E4EAEC)" strokeLinecap="round" strokeWidth="13.7339" />
-            <g id="Ellipse 9">
-              <mask fill="white" id="path-2-inside-1_1_665" />
-              <path d={svgPaths.p3ed41b40} fill="var(--stroke-0, #E4EAEC)" mask="url(#path-2-inside-1_1_665)" />
-              <path d={svgPaths.p3ed41b40} fill="var(--stroke-1, #6EC679)" mask="url(#path-2-inside-1_1_665)" />
-              <g clipPath="url(#paint0_angular_1_665_clip_path)" data-figma-skip-parse="true" mask="url(#path-2-inside-1_1_665)">
-                <g transform="matrix(0 0.0707501 -0.1415 0 148.367 77.617)">
-                  <foreignObject height="2388.24" width="2388.24" x="-1194.12" y="-1194.12">
-                    <div style={{ background: "conic-gradient(from 90deg,rgba(110, 198, 121, 1) 0deg,rgba(33, 242, 108, 1) 360deg)", height: "100%", width: "100%", opacity: "1" }} />
-                  </foreignObject>
-                </g>
-              </g>
-              <path d={svgPaths.p3ed41b40} data-figma-gradient-fill="{'type':'GRADIENT_ANGULAR','stops':[{'color':{'r':0.43137255311012268,'g':0.77647060155868530,'b':0.47450980544090271,'a':1.0},'position':0.0},{'color':{'r':0.13255813717842102,'g':0.94999998807907104,'b':0.42418602108955383,'a':1.0},'position':1.0}],'stopsVar':[{'color':{'r':0.43137255311012268,'g':0.77647060155868530,'b':0.47450980544090271,'a':1.0},'position':0.0},{'color':{'r':0.13255813717842102,'g':0.94999998807907104,'b':0.42418602108955383,'a':1.0},'position':1.0}],'transform':{'m00':5.4088003742730831e-14,'m01':-283.00027465820312,'m02':289.86721801757812,'m10':141.50013732910156,'m11':7.4016395226403353e-14,'m12':6.8669400215148926},'opacity':1.0,'blendMode':'NORMAL','visible':true}" mask="url(#path-2-inside-1_1_665)" />
-            </g>
-          </g>
-          <defs>
-            <clipPath id="paint0_angular_1_665_clip_path">
-              <path d={svgPaths.p3ed41b40} mask="url(#path-2-inside-1_1_665)" />
-            </clipPath>
-          </defs>
-        </svg>
-      </div>
-    </div>
-  );
-}
-
-function Frame110() {
-  return (
-    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-center left-[calc(50%-0.5px)] px-[22.072px] top-[221px] w-[283px]">
-      <Frame111 />
-      <p className="absolute font-['Satoshi:Regular',sans-serif] leading-[normal] left-[calc(50%-47.5px)] not-italic overflow-hidden text-[#0b191f] text-[36px] text-ellipsis top-[71px] whitespace-nowrap">100%</p>
-      <p className="absolute font-['Satoshi:Medium',sans-serif] leading-[normal] left-[calc(50%-78.58px)] not-italic overflow-hidden text-[#13a82e] text-[22.072px] text-ellipsis top-[120px] tracking-[-0.2207px] whitespace-nowrap">Project on track</p>
-    </div>
-  );
-}
-
 function Frame120() {
+  const gaugeRef = useRef<HTMLDivElement>(null);
+  const [gaugeVisible, setGaugeVisible] = useState(false);
+  const [gaugePercent, setGaugePercent] = useState(0);
+  const gaugePctRef = useRef(0);
+
+  useEffect(() => {
+    const el = gaugeRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([e]) => setGaugeVisible(e.isIntersecting),
+      { threshold: 0.45 },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const target = gaugeVisible ? 100 : 0;
+    const start = gaugePctRef.current;
+    if (start === target) return;
+    const duration = 1500;
+    let t0: number | null = null;
+    let frame: number;
+    const tick = (ts: number) => {
+      if (!t0) t0 = ts;
+      const p = Math.min((ts - t0) / duration, 1);
+      const ease = 1 - (1 - p) * (1 - p);
+      const val = Math.round(start + (target - start) * ease);
+      gaugePctRef.current = val;
+      setGaugePercent(val);
+      if (p < 1) frame = requestAnimationFrame(tick);
+    };
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [gaugeVisible]);
+
   return (
-    <div className="h-[444px] relative overflow-hidden rounded-[36px] shadow-[0px_39px_11px_0px_rgba(181,181,181,0),0px_25px_10px_0px_rgba(181,181,181,0.04),0px_14px_8px_0px_rgba(181,181,181,0.12),0px_6px_6px_0px_rgba(181,181,181,0.2),0px_2px_3px_0px_rgba(181,181,181,0.24)] shrink-0 w-full" style={{ backgroundImage: "linear-gradient(rgba(178, 247, 194, 0.48) 0%, rgba(253, 251, 247, 0.48) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}>
+    <div ref={gaugeRef} className="h-[444px] relative overflow-hidden rounded-[36px] shadow-[0px_39px_11px_0px_rgba(181,181,181,0),0px_25px_10px_0px_rgba(181,181,181,0.04),0px_14px_8px_0px_rgba(181,181,181,0.12),0px_6px_6px_0px_rgba(181,181,181,0.2),0px_2px_3px_0px_rgba(181,181,181,0.24)] shrink-0 w-full" style={{ backgroundImage: "linear-gradient(rgba(178, 247, 194, 0.48) 0%, rgba(253, 251, 247, 0.48) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}>
       <div className="flex flex-col items-center overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex flex-col gap-[24px] items-center p-[48px] relative size-full">
           <div className="-translate-x-1/2 absolute flex h-[824.007px] items-center justify-center left-[calc(50%+318.64px)] top-[-169px] w-[1603.272px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
@@ -2397,7 +2391,27 @@ function Frame120() {
             </div>
           </div>
           <Frame132 />
-          <Frame110 />
+          <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-center left-[calc(50%-0.5px)] px-[22.072px] top-[221px] w-[283px]">
+            <div className="h-[141.5px] relative shrink-0 w-[283px] overflow-visible">
+              <div className="absolute inset-[-4.85%_-2.43%]">
+                <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 296.734 155.234">
+                  <path d={svgPaths.p2dadad00} stroke="#E4EAEC" strokeLinecap="round" strokeWidth="13.7339" />
+                  <path
+                    d={svgPaths.p2dadad00}
+                    stroke="#6EC679"
+                    strokeLinecap="round"
+                    strokeWidth="13.7339"
+                    pathLength="100"
+                    strokeDasharray="100"
+                    strokeDashoffset={100 - gaugePercent}
+                    style={{ transition: "none" }}
+                  />
+                </svg>
+              </div>
+            </div>
+            <p className="absolute font-['Satoshi:Regular',sans-serif] leading-[normal] not-italic overflow-hidden text-[#0b191f] text-[36px] text-ellipsis top-[71px] whitespace-nowrap left-1/2 -translate-x-1/2">{gaugePercent}%</p>
+            <p className="absolute font-['Satoshi:Medium',sans-serif] leading-[normal] not-italic overflow-hidden text-[#13a82e] text-[22.072px] text-ellipsis top-[120px] tracking-[-0.2207px] whitespace-nowrap left-1/2 -translate-x-1/2" style={{ opacity: gaugePercent === 100 ? 1 : 0, transition: "opacity 0.3s" }}>Project on track</p>
+          </div>
         </div>
       </div>
     </div>
