@@ -251,123 +251,57 @@ function Frame118() {
   );
 }
 
-function Frame137() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0">
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#eb4335] left-1/2 mix-blend-color-burn rounded-[5.064px] size-[10.128px] top-1/2" />
-      <div className="bg-[#eb4335] rounded-[1264.692px] shrink-0 size-[2.532px]" />
-    </div>
-  );
-}
-
-function Frame113() {
+function MobileTag({ text }: { text: string }) {
   return (
     <div className="bg-[rgba(255,255,255,0.2)] content-stretch flex gap-[7.596px] items-center px-[10.128px] py-[5.064px] relative rounded-[62.665px] shrink-0">
-      <Frame137 />
-      <p className="font-['Satoshi:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#606d76] text-[8.862px] whitespace-nowrap">Create interactive prototypes</p>
+      <div className="content-stretch flex items-center relative shrink-0">
+        <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#eb4335] left-1/2 mix-blend-color-burn rounded-[5.064px] size-[10.128px] top-1/2" />
+        <div className="bg-[#eb4335] rounded-[1264.692px] shrink-0 size-[2.532px]" />
+      </div>
+      <p className="font-['Satoshi:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#606d76] text-[8.862px] whitespace-nowrap">{text}</p>
     </div>
   );
 }
 
-function Frame139() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0">
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#eb4335] left-1/2 mix-blend-color-burn rounded-[5.064px] size-[10.128px] top-1/2" />
-      <div className="bg-[#eb4335] rounded-[1264.692px] shrink-0 size-[2.532px]" />
-    </div>
-  );
-}
+const mobileTopRow = [
+  "Create interactive prototypes",
+  "Conduct usability testing",
+  "Build user flow diagrams",
+  "Design system components",
+  "Write API documentation",
+  "Review pull requests",
+  "Run regression tests",
+  "Refactor legacy modules",
+];
 
-function Frame135() {
-  return (
-    <div className="bg-[rgba(255,255,255,0.2)] content-stretch flex gap-[7.596px] items-center px-[10.128px] py-[5.064px] relative rounded-[62.665px] shrink-0">
-      <Frame139 />
-      <p className="font-['Satoshi:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#606d76] text-[8.862px] whitespace-nowrap">Conduct usability testing</p>
-    </div>
-  );
-}
-
-function Frame141() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0">
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#eb4335] left-1/2 mix-blend-color-burn rounded-[5.064px] size-[10.128px] top-1/2" />
-      <div className="bg-[#eb4335] rounded-[1264.692px] shrink-0 size-[2.532px]" />
-    </div>
-  );
-}
-
-function Frame140() {
-  return (
-    <div className="bg-[rgba(255,255,255,0.2)] content-stretch flex gap-[7.596px] items-center px-[10.128px] py-[5.064px] relative rounded-[62.665px] shrink-0">
-      <Frame141 />
-      <p className="font-['Satoshi:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#606d76] text-[8.862px] whitespace-nowrap">Build user flow diagrams</p>
-    </div>
-  );
-}
-
-function Frame143() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0">
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#eb4335] left-1/2 mix-blend-color-burn rounded-[5.064px] size-[10.128px] top-1/2" />
-      <div className="bg-[#eb4335] rounded-[1264.692px] shrink-0 size-[2.532px]" />
-    </div>
-  );
-}
-
-function Frame142() {
-  return (
-    <div className="bg-[rgba(255,255,255,0.2)] content-stretch flex gap-[7.596px] items-center px-[10.128px] py-[5.064px] relative rounded-[62.665px] shrink-0">
-      <Frame143 />
-      <p className="font-['Satoshi:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#606d76] text-[8.862px] whitespace-nowrap">Implement accessibility standards</p>
-    </div>
-  );
-}
-
-function Frame145() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0">
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#eb4335] left-1/2 mix-blend-color-burn rounded-[5.064px] size-[10.128px] top-1/2" />
-      <div className="bg-[#eb4335] rounded-[1264.692px] shrink-0 size-[2.532px]" />
-    </div>
-  );
-}
-
-function Frame144() {
-  return (
-    <div className="bg-[rgba(255,255,255,0.2)] content-stretch flex gap-[7.596px] items-center px-[10.128px] py-[5.064px] relative rounded-[62.665px] shrink-0">
-      <Frame145 />
-      <p className="font-['Satoshi:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#606d76] text-[8.862px] whitespace-nowrap">Create style guide documentation</p>
-    </div>
-  );
-}
-
-function Frame147() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0">
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#eb4335] left-1/2 mix-blend-color-burn rounded-[5.064px] size-[10.128px] top-1/2" />
-      <div className="bg-[#eb4335] rounded-[1264.692px] shrink-0 size-[2.532px]" />
-    </div>
-  );
-}
-
-function Frame146() {
-  return (
-    <div className="bg-[rgba(255,255,255,0.2)] content-stretch flex gap-[7.596px] items-center px-[10.128px] py-[5.064px] relative rounded-[62.665px] shrink-0">
-      <Frame147 />
-      <p className="font-['Satoshi:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#606d76] text-[8.862px] whitespace-nowrap">Ticket admin</p>
-    </div>
-  );
-}
+const mobileBottomRow = [
+  "Implement accessibility standards",
+  "Create style guide documentation",
+  "Ticket admin",
+  "Sprint retrospective notes",
+  "Deploy staging builds",
+  "Update project roadmap",
+  "Fix CI pipeline issues",
+  "Audit dependency versions",
+];
 
 function Frame138() {
   return (
-    <div className="absolute content-center flex flex-wrap gap-[3.164893627166748px_3.165px] items-center left-0 top-[59.5px] w-[422.197px]">
-      <Frame113 />
-      <Frame135 />
-      <Frame140 />
-      <Frame142 />
-      <Frame144 />
-      <Frame146 />
+    <div className="absolute flex flex-col gap-[3.165px] left-0 top-[59.5px] w-full overflow-hidden">
+      <div className="flex w-max gap-[3.165px]" style={{ animation: "marquee-left 25s linear infinite" }}>
+        {[...Array(2)].map((_, i) => (
+          <div key={i} className="flex gap-[3.165px] shrink-0">
+            {mobileTopRow.map((t) => <MobileTag key={t} text={t} />)}
+          </div>
+        ))}
+      </div>
+      <div className="flex w-max gap-[3.165px]" style={{ animation: "marquee-right 25s linear infinite" }}>
+        {[...Array(2)].map((_, i) => (
+          <div key={i} className="flex gap-[3.165px] shrink-0">
+            {mobileBottomRow.map((t) => <MobileTag key={t} text={t} />)}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -563,13 +563,35 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="absolute h-[268.501px] left-1/2 -translate-x-1/2 top-[262px] w-[750px]">
-            <div className="absolute flex flex-wrap justify-center gap-[8px] items-center left-1/2 -translate-x-1/2 top-[94px] w-[750px]">
-              <BackgroundImageAndText text="Create interactive prototypes" />
-              <BackgroundImageAndText text="Conduct usability testing" />
-              <BackgroundImageAndText text="Build user flow diagrams" />
-              <BackgroundImageAndText text="Implement accessibility standards" />
-              <BackgroundImageAndText text="Create style guide documentation" />
-              <BackgroundImageAndText text="Ticket admin" />
+            <div className="absolute flex flex-col gap-[8px] left-1/2 -translate-x-1/2 top-[94px] w-[750px] overflow-hidden">
+              <div className="flex w-max gap-[8px]" style={{ animation: "marquee-left 30s linear infinite" }}>
+                {[...Array(2)].map((_, i) => (
+                  <div key={i} className="flex gap-[8px] shrink-0">
+                    <BackgroundImageAndText text="Create interactive prototypes" />
+                    <BackgroundImageAndText text="Conduct usability testing" />
+                    <BackgroundImageAndText text="Build user flow diagrams" />
+                    <BackgroundImageAndText text="Design system components" />
+                    <BackgroundImageAndText text="Write API documentation" />
+                    <BackgroundImageAndText text="Review pull requests" />
+                    <BackgroundImageAndText text="Run regression tests" />
+                    <BackgroundImageAndText text="Refactor legacy modules" />
+                  </div>
+                ))}
+              </div>
+              <div className="flex w-max gap-[8px]" style={{ animation: "marquee-right 30s linear infinite" }}>
+                {[...Array(2)].map((_, i) => (
+                  <div key={i} className="flex gap-[8px] shrink-0">
+                    <BackgroundImageAndText text="Implement accessibility standards" />
+                    <BackgroundImageAndText text="Create style guide documentation" />
+                    <BackgroundImageAndText text="Ticket admin" />
+                    <BackgroundImageAndText text="Sprint retrospective notes" />
+                    <BackgroundImageAndText text="Deploy staging builds" />
+                    <BackgroundImageAndText text="Update project roadmap" />
+                    <BackgroundImageAndText text="Fix CI pipeline issues" />
+                    <BackgroundImageAndText text="Audit dependency versions" />
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="-translate-x-1/2 absolute h-[21px] left-[calc(50%-0.5px)] top-[71px] w-0">
               <div className="absolute inset-[-4.76%_-1px]">
