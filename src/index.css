@@ -26,3 +26,8 @@ body {
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0); }
 }
+
+/* Sonner (waitlist / errors): Satoshi + success icon like continuum-MVP login toast */
+[data-sonner-toaster] [data-sonner-toast] {
+  font-family: 'Satoshi', system-ui, sans-serif;
+}

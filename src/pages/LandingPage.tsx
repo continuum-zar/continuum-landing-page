@@ -1,25 +1,28 @@
 import React, { useState, useEffect, useRef } from "react";
 import clsx from "clsx";
+import { toast } from "sonner";
 import { postWaitlistSignup } from "@/api/waitlist";
+import { playWaitlistSuccessSound } from "@/lib/playWaitlistSuccessSound";
 import { scrollToWaitlist } from "@/lib/scrollToWaitlist";
 import svgPaths from "./landing-svg";
 import { useInvoiceCarousel, InvoiceCardStrip } from "@/components/InvoiceCardCarousel";
 
 function LandingWaitlistForm() {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading">("idle");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setErrorMessage("");
     setStatus("loading");
     try {
       await postWaitlistSignup(email.trim());
-      setStatus("success");
+      playWaitlistSuccessSound();
+      toast.success("You've been added to the list, check your email to confirm");
+      setEmail("");
+      setStatus("idle");
     } catch {
-      setStatus("error");
-      setErrorMessage("Something went wrong. Please try again in a moment.");
+      toast.error("Something went wrong. Please try again in a moment.");
+      setStatus("idle");
     }
   }
 
@@ -45,7 +48,7 @@ function LandingWaitlistForm() {
               placeholder="Email address"
               value={email}
               onChange={(ev) => setEmail(ev.target.value)}
-              disabled={status === "loading" || status === "success"}
+              disabled={status === "loading"}
               className="w-full h-full bg-transparent border-0 outline-none rounded-[8px] px-[16px] py-[8px] font-['Satoshi:Medium',sans-serif] text-[14px] text-[#252014] placeholder:text-[#606d76] disabled:opacity-70"
             />
           </label>
@@ -53,7 +56,7 @@ function LandingWaitlistForm() {
         <div className="content-stretch flex gap-[8px] h-[40px] items-center relative shrink-0">
           <button
             type="submit"
-            disabled={status === "loading" || status === "success"}
+            disabled={status === "loading"}
             className="h-full relative rounded-[8px] shrink-0 bg-[#24b5f8] hover:bg-[#297ccb] transition-colors disabled:opacity-70 cursor-pointer disabled:cursor-not-allowed border-0"
             data-name="Component 7"
           >
@@ -71,16 +74,6 @@ function LandingWaitlistForm() {
           </button>
         </div>
       </div>
-      {status === "success" ? (
-        <p className="font-['Satoshi:Medium',sans-serif] text-[14px] text-[#0b191f] text-center w-full" role="status">
-          Thanks — check your inbox for a confirmation.
-        </p>
-      ) : null}
-      {status === "error" && errorMessage ? (
-        <p className="font-['Satoshi:Medium',sans-serif] text-[14px] text-red-600 text-center w-full" role="alert">
-          {errorMessage}
-        </p>
-      ) : null}
     </form>
   );
 }

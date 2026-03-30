@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import svgPaths from "./landing-mobile-svg";
 import { useInvoiceCarousel, InvoiceCardStrip } from "@/components/InvoiceCardCarousel";
+import { toast } from "sonner";
 import { postWaitlistSignup } from "@/api/waitlist";
+import { playWaitlistSuccessSound } from "@/lib/playWaitlistSuccessSound";
 import { scrollToWaitlist } from "@/lib/scrollToWaitlist";
 
 /** Hero panel images under `public/landing/`. */
@@ -11,19 +13,20 @@ const imgWip2 = "/landing/d50090486565d73083f0d763cbc6c9cf009a03fe.png";
 
 function MobileWaitlistForm() {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading">("idle");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setErrorMessage("");
     setStatus("loading");
     try {
       await postWaitlistSignup(email.trim());
-      setStatus("success");
+      playWaitlistSuccessSound();
+      toast.success("You've been added to the list, check your email to confirm");
+      setEmail("");
+      setStatus("idle");
     } catch {
-      setStatus("error");
-      setErrorMessage("Something went wrong. Please try again in a moment.");
+      toast.error("Something went wrong. Please try again in a moment.");
+      setStatus("idle");
     }
   }
 
@@ -49,7 +52,7 @@ function MobileWaitlistForm() {
               placeholder="Email address"
               value={email}
               onChange={(ev) => setEmail(ev.target.value)}
-              disabled={status === "loading" || status === "success"}
+              disabled={status === "loading"}
               className="w-full h-full bg-transparent border-0 outline-none rounded-[8px] px-[16px] py-[8px] font-['Satoshi:Medium',sans-serif] text-[14px] text-[#252014] placeholder:text-[#606d76] disabled:opacity-70"
             />
           </label>
@@ -57,7 +60,7 @@ function MobileWaitlistForm() {
         <div className="content-stretch flex gap-[8px] h-[40px] items-center relative shrink-0">
           <button
             type="submit"
-            disabled={status === "loading" || status === "success"}
+            disabled={status === "loading"}
             className="h-full relative rounded-[8px] shrink-0 border-0 cursor-pointer bg-[#24b5f8] hover:bg-[#297ccb] transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
             data-name="Component 7"
             style={{
@@ -79,16 +82,6 @@ function MobileWaitlistForm() {
           </button>
         </div>
       </div>
-      {status === "success" ? (
-        <p className="font-['Satoshi:Medium',sans-serif] text-[14px] text-[#0b191f] text-center w-full" role="status">
-          Thanks — check your inbox for a confirmation.
-        </p>
-      ) : null}
-      {status === "error" && errorMessage ? (
-        <p className="font-['Satoshi:Medium',sans-serif] text-[14px] text-red-600 text-center w-full" role="alert">
-          {errorMessage}
-        </p>
-      ) : null}
     </form>
   );
 }

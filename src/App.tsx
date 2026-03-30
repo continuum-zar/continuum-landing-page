@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import LandingPage from '@/pages/LandingPage';
 import LandingPageMobile from '@/pages/LandingPageMobile';
+import { Toaster } from '@/components/Toaster';
 import { useMinWidthMd } from '@/hooks/useMinWidthMd';
 
 export default function App() {
@@ -15,16 +16,19 @@ export default function App() {
   }, [isDesktop]);
 
   return (
-    <main className="relative w-full overflow-x-hidden bg-[#f9fafb]">
-      {isDesktop ? (
-        <LandingPage />
-      ) : (
-        <div className="w-full overflow-x-hidden bg-[#f9fafb]">
-          <div className="relative mx-auto w-full max-w-[402px] overflow-x-hidden">
-            <LandingPageMobile />
+    <>
+      <main className="relative w-full overflow-x-hidden bg-[#f9fafb]">
+        {isDesktop ? (
+          <LandingPage />
+        ) : (
+          <div className="w-full overflow-x-hidden bg-[#f9fafb]">
+            <div className="relative mx-auto w-full max-w-[402px] overflow-x-hidden">
+              <LandingPageMobile />
+            </div>
           </div>
-        </div>
-      )}
-    </main>
+        )}
+      </main>
+      <Toaster />
+    </>
   );
 }
