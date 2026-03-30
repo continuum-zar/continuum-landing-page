@@ -89,61 +89,11 @@ function LandingWaitlistForm() {
 const imgWip = "/landing/83a55141b039a44613c6c93d2b20289d9128f6c1.png";
 const imgWip1 = "/landing/4c18501708f09ce453837dc0d00f9f3592d6896b.png";
 const imgWip2 = "/landing/d50090486565d73083f0d763cbc6c9cf009a03fe.png";
-type BackgroundImage12Props = {
-  additionalClassNames?: string;
-};
-
-function BackgroundImage12({ children, additionalClassNames = "" }: React.PropsWithChildren<BackgroundImage12Props>) {
-  return (
-    <div className={clsx("absolute bg-white rounded-[7.936px] top-0 w-[116.56px]", additionalClassNames)}>
-      <div className="content-stretch flex flex-col items-start overflow-clip relative rounded-[inherit] w-full">{children}</div>
-      <div aria-hidden="true" className="absolute border-[#ebedee] border-[0.496px] border-solid inset-0 pointer-events-none rounded-[7.936px] shadow-[0px_9px_2px_0px_rgba(26,59,84,0),0px_6px_2px_0px_rgba(26,59,84,0.01),0px_3px_2px_0px_rgba(26,59,84,0.04),0px_1px_1px_0px_rgba(26,59,84,0.06),0px_0px_1px_0px_rgba(26,59,84,0.07)]" />
-    </div>
-  );
-}
-
-function BackgroundImage11({ children }: React.PropsWithChildren) {
-  return (
-    <div style={{ backgroundImage: "linear-gradient(90deg, rgb(242, 245, 247) 0%, rgb(242, 245, 247) 100%), linear-gradient(90deg, rgb(252, 249, 243) 0%, rgb(252, 249, 243) 100%)" }} className="relative shrink-0 w-full">
-      <div className="content-stretch flex flex-col gap-[11.904px] items-start pb-[7.936px] pl-[11.904px] pr-[7.936px] pt-[11.904px] relative w-full">{children}</div>
-    </div>
-  );
-}
 
 function BackgroundImage10({ children }: React.PropsWithChildren) {
   return (
     <div className="relative shrink-0 size-[9.273px]">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 9.27288 9.27288">
-        {children}
-      </svg>
-    </div>
-  );
-}
-
-function BackgroundImage9({ children }: React.PropsWithChildren) {
-  return (
-    <div className="h-[8.608px] relative shrink-0 w-[7.936px]">
-      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 7.936 8.608">
-        {children}
-      </svg>
-    </div>
-  );
-}
-
-function BackgroundImage8({ children }: React.PropsWithChildren) {
-  return (
-    <div className="relative shrink-0 size-[11.904px]">
-      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 11.904 11.904">
-        {children}
-      </svg>
-    </div>
-  );
-}
-
-function BackgroundImage7({ children }: React.PropsWithChildren) {
-  return (
-    <div className="relative shrink-0 size-[7.936px]">
-      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 7.936 7.936">
         {children}
       </svg>
     </div>
@@ -165,16 +115,6 @@ function BackgroundImage5({ children }: React.PropsWithChildren) {
     <div className="bg-white relative rounded-[4.636px] shrink-0 w-full">
       <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[0.58px] border-solid inset-0 pointer-events-none rounded-[4.636px]" />
       <div className="flex flex-row items-center size-full">{children}</div>
-    </div>
-  );
-}
-
-function BackgroundImage4({ children }: React.PropsWithChildren) {
-  return (
-    <div className="relative shrink-0 w-full">
-      <div className="flex flex-col items-end size-full">
-        <div className="content-stretch flex flex-col gap-[9.92px] items-end pb-[11.904px] pt-[9.92px] px-[11.904px] relative w-full">{children}</div>
-      </div>
     </div>
   );
 }
@@ -264,111 +204,6 @@ function Frame379BackgroundImage({ additionalClassNames = "" }: Frame379Backgrou
   );
 }
 
-function LucideDownloadBackgroundImage() {
-  return (
-    <BackgroundImage7>
-      <g clipPath="url(#clip0_1_765)" id="lucide/download">
-        <path d={svgPaths.p1aa12300} id="Vector" stroke="var(--stroke-0, #606D76)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.744" />
-      </g>
-      <defs>
-        <clipPath id="clip0_1_765">
-          <rect fill="white" height="7.936" width="7.936" />
-        </clipPath>
-      </defs>
-    </BackgroundImage7>
-  );
-}
-
-function LucideScrollTextBackgroundImage() {
-  return (
-    <BackgroundImage8>
-      <g clipPath="url(#clip0_1_659)" id="lucide/scroll-text">
-        <path d={svgPaths.p7a68180} id="Vector" stroke="var(--stroke-0, #606D76)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.496" />
-      </g>
-      <defs>
-        <clipPath id="clip0_1_659">
-          <rect fill="white" height="11.904" width="11.904" />
-        </clipPath>
-      </defs>
-    </BackgroundImage8>
-  );
-}
-
-function LucideEllipsisBackgroundImage1() {
-  return (
-    <BackgroundImage9>
-      <g clipPath="url(#clip0_1_679)" id="lucide/ellipsis">
-        <g id="Vector">
-          <path d={svgPaths.p376c1b80} stroke="var(--stroke-0, #606D76)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
-          <path d={svgPaths.p889f200} stroke="var(--stroke-0, #606D76)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
-          <path d={svgPaths.p12ec3e00} stroke="var(--stroke-0, #606D76)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
-        </g>
-      </g>
-      <defs>
-        <clipPath id="clip0_1_679">
-          <rect fill="white" height="8.608" width="7.936" />
-        </clipPath>
-      </defs>
-    </BackgroundImage9>
-  );
-}
-
-function BackgroundImage2() {
-  return (
-    <div className="h-0 relative shrink-0 w-full">
-      <div className="absolute inset-[-0.28px_0]">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 92.752 0.56544">
-          <path d="M0 0.28272H92.752" id="Vector 4" stroke="var(--stroke-0, #EBEDEE)" strokeWidth="0.56544" />
-        </svg>
-      </div>
-    </div>
-  );
-}
-type BackgroundImage1Props = {
-  text: string;
-  text1: string;
-};
-
-function BackgroundImage1({ text, text1 }: BackgroundImage1Props) {
-  return (
-    <div className="content-stretch flex flex-col font-['Satoshi:Medium',sans-serif] gap-[1.984px] items-start leading-[normal] not-italic relative shrink-0 text-ellipsis whitespace-nowrap">
-      <p className="overflow-hidden relative shrink-0 text-[#727d83] text-[5.952px]">{text}</p>
-      <p className="overflow-hidden relative shrink-0 text-[#0b191f] text-[6.944px]">{text1}</p>
-    </div>
-  );
-}
-type BackgroundImageProps = {
-  text: string;
-  text1: string;
-};
-
-function BackgroundImage({ text, text1 }: BackgroundImageProps) {
-  return (
-    <div className="content-stretch flex flex-col gap-[3.968px] items-start leading-[normal] not-italic relative shrink-0 w-full">
-      <p className="font-['Satoshi:Medium',sans-serif] relative shrink-0 text-[#0b191f] text-[9.92px] w-full">{text}</p>
-      <p className="font-['Satoshi:Regular',sans-serif] relative shrink-0 text-[#606d76] text-[6.944px] w-full">{text1}</p>
-    </div>
-  );
-}
-
-function LucideEllipsisBackgroundImage() {
-  return (
-    <BackgroundImage9>
-      <g clipPath="url(#clip0_1_667)" id="lucide/ellipsis">
-        <g id="Vector">
-          <path d={svgPaths.p376c1b80} stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
-          <path d={svgPaths.p889f200} stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
-          <path d={svgPaths.p12ec3e00} stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
-        </g>
-      </g>
-      <defs>
-        <clipPath id="clip0_1_667">
-          <rect fill="white" height="8.608" width="7.936" />
-        </clipPath>
-      </defs>
-    </BackgroundImage9>
-  );
-}
 type BackgroundImageAndTextProps = {
   text: string;
 };
@@ -980,16 +815,19 @@ export default function LandingPage() {
                   <div className="absolute inset-[-4.85%_-2.43%]">
                     <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 337.792 176.713">
                       <path d={svgPaths.p24b83740} stroke="#E4EAEC" strokeLinecap="round" strokeWidth="15.6342" />
-                      <path
-                        d={svgPaths.p24b83740}
-                        stroke="#6EC679"
-                        strokeLinecap="round"
-                        strokeWidth="15.6342"
-                        pathLength="100"
-                        strokeDasharray="100"
-                        strokeDashoffset={100 - gaugePercent}
-                        style={{ transition: "none" }}
-                      />
+                      {/* Flip green stroke so dash fill runs left → right (path is defined right → left) */}
+                      <g transform="translate(337.792 0) scale(-1 1)">
+                        <path
+                          d={svgPaths.p24b83740}
+                          stroke="#6EC679"
+                          strokeLinecap="round"
+                          strokeWidth="15.6342"
+                          pathLength="100"
+                          strokeDasharray="100"
+                          strokeDashoffset={100 - gaugePercent}
+                          style={{ transition: "none" }}
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
