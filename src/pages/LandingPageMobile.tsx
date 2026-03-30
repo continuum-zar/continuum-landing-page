@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import svgPaths from "./landing-mobile-svg";
+import { useInvoiceCarousel, InvoiceCardStrip } from "@/components/InvoiceCardCarousel";
 import { postWaitlistSignup } from "@/api/waitlist";
 import { scrollToWaitlist } from "@/lib/scrollToWaitlist";
 
@@ -2027,6 +2028,7 @@ function Frame131() {
 }
 
 function Frame134() {
+  const invCarousel = useInvoiceCarousel();
   return (
     <div className="h-[379.522px] relative w-[749.361px]">
       <div className="absolute flex h-[580.094px] items-center justify-center left-[-16.23px] top-[-162.57px] w-[721.685px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
@@ -2047,11 +2049,7 @@ function Frame134() {
         </div>
       </div>
       <CreateTask />
-      <Frame60 />
-      <Frame125 />
-      <Frame128 />
-      <Frame129 />
-      <Frame130 />
+      <InvoiceCardStrip {...invCarousel} />
       <div className="absolute h-[25.5px] left-[58px] top-[164px] w-[631px]">
         <div className="absolute inset-[-5.85%_-0.94%_-77.82%_-0.94%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 642.912 46.836">
@@ -2273,8 +2271,6 @@ function Frame134() {
           </div>
         </div>
       </div>
-      <Frame126 />
-      <Frame131 />
     </div>
   );
 }
