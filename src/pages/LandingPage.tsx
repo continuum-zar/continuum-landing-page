@@ -6,6 +6,7 @@ import { playWaitlistSuccessSound } from "@/lib/playWaitlistSuccessSound";
 import { scrollToWaitlist } from "@/lib/scrollToWaitlist";
 import svgPaths from "./landing-svg";
 import { useInvoiceCarousel, InvoiceCardStrip } from "@/components/InvoiceCardCarousel";
+import ContinuumAiFeatures from "@/components/ContinuumAiFeatures";
 
 function LandingWaitlistForm() {
   const [email, setEmail] = useState("");
@@ -78,10 +79,10 @@ function LandingWaitlistForm() {
   );
 }
 
-/** Hero panel images under `public/landing/`. */
-const imgWip = "/landing/83a55141b039a44613c6c93d2b20289d9128f6c1.png";
-const imgWip1 = "/landing/4c18501708f09ce453837dc0d00f9f3592d6896b.png";
-const imgWip2 = "/landing/d50090486565d73083f0d763cbc6c9cf009a03fe.png";
+/** Hero panel images — exported from Figma (left 52:12665, right 52:12666, center 52:12667). */
+const imgWip = "/landing/hero-wip-left.png";
+const imgWip1 = "/landing/hero-wip-right.png";
+const imgWip2 = "/landing/hero-wip-center.png";
 
 function BackgroundImage10({ children }: React.PropsWithChildren) {
   return (
@@ -285,7 +286,7 @@ export default function LandingPage() {
 
   return (
     <div
-      className="relative min-h-[2800px] w-full overflow-x-hidden bg-[#f9fafb]"
+      className="relative min-h-[3700px] w-full overflow-x-hidden bg-[#f9fafb]"
       data-name="Landing page"
     >
       <div className="-translate-x-1/2 absolute h-[627.236px] left-[calc(50%-0.27px)] top-[471px] w-[1679.176px]">
@@ -330,9 +331,8 @@ export default function LandingPage() {
         <div className="absolute flex h-[446.294px] items-center justify-center left-[130.86px] top-[103px] w-[463.259px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
           <div className="flex-none rotate-[-5.98deg]">
             <div className="h-[404.386px] pointer-events-none relative rounded-[9.829px] w-[423.44px]" data-name="WIP">
-              <div aria-hidden="true" className="absolute inset-0 rounded-[9.829px]">
-                <div className="absolute inset-0 rounded-[9.829px]" style={{ backgroundImage: "linear-gradient(0deg, rgba(178, 230, 247, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), linear-gradient(90deg, rgb(249, 250, 251) 0%, rgb(249, 250, 251) 100%)" }} />
-                <img alt="" className="absolute max-w-none object-cover rounded-[9.829px] size-full" src={imgWip} />
+              <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-[9.829px]">
+                <img alt="" className="absolute max-w-none object-cover object-left-top rounded-[9.829px] size-full" src={imgWip} />
               </div>
               <div aria-hidden="true" className="absolute border-[#ededed] border-[1.081px] border-solid inset-0 rounded-[9.829px] shadow-[0px_124.343px_34.6px_0px_rgba(26,58,84,0),0px_80.012px_31.356px_0px_rgba(26,58,84,0.01),0px_44.331px_27.031px_0px_rgba(26,58,84,0.05),0px_19.462px_19.462px_0px_rgba(26,58,84,0.09),0px_5.406px_10.812px_0px_rgba(26,58,84,0.1)]" />
             </div>
@@ -341,18 +341,16 @@ export default function LandingPage() {
         <div className="absolute flex h-[446.305px] items-center justify-center left-[1094.04px] top-[113.35px] w-[463.268px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
           <div className="flex-none rotate-[5.98deg]">
             <div className="h-[404.39px] pointer-events-none relative rounded-[5.54px] w-[423.442px]" data-name="WIP">
-              <div aria-hidden="true" className="absolute inset-0 rounded-[5.54px]">
-                <div className="absolute inset-0 rounded-[5.54px]" style={{ backgroundImage: "linear-gradient(0deg, rgba(178, 230, 247, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), linear-gradient(90deg, rgb(249, 250, 251) 0%, rgb(249, 250, 251) 100%)" }} />
-                <img alt="" className="absolute max-w-none object-cover rounded-[5.54px] size-full" src={imgWip1} />
+              <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-[5.54px]">
+                <img alt="" className="absolute max-w-none object-cover object-left-top rounded-[5.54px] size-full" src={imgWip1} />
               </div>
               <div aria-hidden="true" className="absolute border-[#ededed] border-[1.081px] border-solid inset-0 rounded-[5.54px] shadow-[0px_124.345px_34.6px_0px_rgba(26,58,84,0),0px_80.013px_31.356px_0px_rgba(26,58,84,0.01),0px_44.332px_27.031px_0px_rgba(26,58,84,0.05),0px_19.463px_19.463px_0px_rgba(26,58,84,0.09),0px_5.406px_10.813px_0px_rgba(26,58,84,0.1)]" />
             </div>
           </div>
         </div>
         <div className="-translate-x-1/2 absolute h-[515.841px] left-[calc(50%+0.4px)] pointer-events-none rounded-[7.54px] top-[25px] w-[794.248px]" data-name="WIP">
-          <div aria-hidden="true" className="absolute inset-0 rounded-[7.54px]">
-            <div className="absolute inset-0 rounded-[7.54px]" style={{ backgroundImage: "linear-gradient(0deg, rgba(178, 230, 247, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), linear-gradient(90deg, rgb(249, 250, 251) 0%, rgb(249, 250, 251) 100%)" }} />
-            <img alt="" className="absolute max-w-none object-cover rounded-[7.54px] size-full" src={imgWip2} />
+          <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-[7.54px]">
+            <img alt="" className="absolute max-w-none object-cover object-left-top rounded-[7.54px] size-full" src={imgWip2} />
           </div>
           <div aria-hidden="true" className="absolute border-[#ededed] border-[1.379px] border-solid inset-0 rounded-[7.54px] shadow-[0px_300px_84px_0px_rgba(26,58,84,0),0px_192px_77px_0px_rgba(26,58,84,0.01),0px_108px_65px_0px_rgba(26,58,84,0.04),0px_48px_48px_0px_rgba(26,58,84,0.07),0px_12px_26px_0px_rgba(26,58,84,0.08)]" />
         </div>
@@ -384,11 +382,16 @@ export default function LandingPage() {
         </div>
       </div>
       <div className="-translate-x-1/2 absolute bg-[#f9fafb] h-[1378px] left-1/2 top-[1458px] w-[1512px]" />
-      <div className="absolute h-[378.896px] left-[-123.73px] top-[2248px] w-[1823.234px]">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-[2248px] z-0 h-[378.896px] w-[1823.234px] -translate-x-1/2"
+      >
         <div className="absolute inset-[-3.17%_0_-3.17%_-0.66%]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1835.7 402.904">
-            <path d={svgPaths.p296fcf40} id="Vector 12" stroke="var(--stroke-0, #E4EAEC)" strokeWidth="24" />
-          </svg>
+          <img
+            alt=""
+            className="block size-full object-fill"
+            src="/landing/vector-12.svg"
+          />
         </div>
       </div>
       <div
@@ -401,7 +404,7 @@ export default function LandingPage() {
       </div>
       <div
         id="landing-features"
-        className="-translate-x-1/2 absolute content-start flex flex-wrap gap-[12px] items-start left-[calc(50%+12.5px)] top-[1518px] w-[1187px] scroll-mt-28"
+        className="absolute left-[calc(50%+12.5px)] top-[1518px] z-10 flex w-[1187px] -translate-x-1/2 flex-wrap content-start items-start gap-[12px] scroll-mt-28"
       >
         <div className="content-stretch flex flex-col gap-[10px] h-[564px] items-center overflow-clip p-[48px] relative rounded-[36px] shadow-[0px_39px_11px_0px_rgba(181,181,181,0),0px_25px_10px_0px_rgba(181,181,181,0.04),0px_14px_8px_0px_rgba(181,181,181,0.12),0px_6px_6px_0px_rgba(181,181,181,0.2),0px_2px_3px_0px_rgba(181,181,181,0.24)] shrink-0 w-[700px]" style={{ backgroundImage: "linear-gradient(rgba(178, 230, 247, 0.48) 0%, rgba(253, 251, 247, 0.48) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}>
           <div className="-translate-x-1/2 absolute left-1/2 size-[700px] top-[40px]">
@@ -460,25 +463,42 @@ export default function LandingPage() {
                 ))}
               </div>
             </div>
-            <div className="-translate-x-1/2 absolute h-[21px] left-[calc(50%-0.5px)] top-[71px] w-0">
-              <div className="absolute inset-[-4.76%_-1px]">
-                <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2 23">
-                  <path d="M1 1V22" id="Vector 21" stroke="var(--stroke-0, #EB4335)" strokeDasharray="9 9" strokeLinecap="round" strokeWidth="2" />
-                </svg>
-              </div>
+            {/* Upper dashed segment — match Figma Vector 21; w-[2px] so stroke is not collapsed */}
+            <div className="-translate-x-1/2 absolute left-[calc(50%-0.5px)] top-[71px] flex h-[21px] w-[2px] items-stretch justify-center">
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2 23">
+                <path d="M1 1V22" id="Vector 21" stroke="#EB4335" strokeDasharray="9 9" strokeLinecap="round" strokeWidth="2" />
+              </svg>
             </div>
-            <div className="-translate-x-1/2 absolute h-[17px] left-[calc(50%-0.5px)] top-[170px] w-0">
-              <div className="absolute inset-[-5.88%_-5.33px_-31.37%_-5.33px]">
-                <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10.6667 23.3333">
-                  <path d={svgPaths.p163b5400} fill="url(#paint0_linear_1_736)" id="Vector 22" />
-                  <defs>
-                    <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_736" x1="5.83333" x2="5.83333" y1="1" y2="18">
-                      <stop stopColor="#EB4335" />
-                      <stop offset="1" stopColor="#FC5244" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
+            {/* Middle dashed segments: gaps through the two marquee pill rows (top ~94–128, ~136–166) so the line does not cross text */}
+            <div
+              aria-hidden
+              className="-translate-x-1/2 absolute left-[calc(50%-0.5px)] top-[92px] flex h-[2px] w-[2px] items-stretch justify-center"
+            >
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2 2">
+                <path d="M1 0V2" stroke="#EB4335" strokeDasharray="9 9" strokeLinecap="round" strokeWidth="2" />
+              </svg>
+            </div>
+            <div
+              aria-hidden
+              className="-translate-x-1/2 absolute left-[calc(50%-0.5px)] top-[128px] flex h-[8px] w-[2px] items-stretch justify-center"
+            >
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2 8">
+                <path d="M1 0V8" stroke="#EB4335" strokeDasharray="9 9" strokeLinecap="round" strokeWidth="2" />
+              </svg>
+            </div>
+            <div
+              aria-hidden
+              className="-translate-x-1/2 absolute left-[calc(50%-0.5px)] top-[166px] flex h-[4px] w-[2px] items-stretch justify-center"
+            >
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2 4">
+                <path d="M1 0V4" stroke="#EB4335" strokeDasharray="9 9" strokeLinecap="round" strokeWidth="2" />
+              </svg>
+            </div>
+            <div
+              aria-hidden
+              className="-translate-x-1/2 absolute left-[calc(50%-0.5px)] top-[170px] flex h-[17px] w-[17px] items-center justify-center"
+            >
+              <div className="size-[10px] shrink-0 rounded-full bg-gradient-to-b from-[#EB4335] to-[#FC5244]" />
             </div>
             <div className="-translate-x-1/2 absolute bg-white left-1/2 rounded-[69.461px] top-0 w-[530px]" data-name="Component 154">
               <div className="content-stretch flex flex-col gap-[9.749px] items-start overflow-clip pl-[25.871px] pr-[8.628px] py-[8.628px] relative rounded-[inherit] w-full">
@@ -831,7 +851,11 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-      <div className="-translate-x-1/2 absolute content-stretch flex gap-[314px] items-center justify-center left-[calc(50%+0.5px)] top-[28px]">
+      <ContinuumAiFeatures
+        variant="desktop"
+        className="absolute left-1/2 top-[2630px] z-10 w-[1187px] -translate-x-1/2 scroll-mt-28"
+      />
+      <div className="absolute left-[calc(50%+0.5px)] top-[28px] z-50 flex -translate-x-1/2 content-stretch items-center justify-center gap-[314px]">
         <div className="content-stretch flex flex-col items-center relative shrink-0">
           <p className="font-continuum leading-[24px] not-italic relative shrink-0 text-[#0b191f] text-[21.405px] text-center tracking-[-0.4281px] whitespace-nowrap">Continuum</p>
         </div>
@@ -856,24 +880,17 @@ export default function LandingPage() {
           <ComponentBackgroundImageAndText1 text="Join Waitlist" />
         </div>
       </div>
-      <div
-        id="landing-footer"
-        className="absolute bottom-[48px] content-stretch flex flex-col items-center left-[137px] not-italic text-center top-auto whitespace-nowrap scroll-mt-28"
-      >
-        <p className="font-continuum leading-[47.662px] relative shrink-0 text-[#0b191f] text-[42.509px] tracking-[-0.8502px]">Continuum</p>
-        <p className="font-['Sathu:Regular',sans-serif] leading-[normal] opacity-80 relative shrink-0 text-[#252014] text-[15.458px] tracking-[-0.1546px]">Time track with one click.</p>
-      </div>
-      <div className="absolute bottom-[48px] content-stretch flex font-['Satoshi:Medium',sans-serif] gap-[51px] items-center leading-[normal] left-[593px] not-italic text-[#606d76] text-[16px] text-center top-auto whitespace-nowrap">
-        <p className="opacity-0 relative shrink-0">Product</p>
-        <p className="opacity-0 relative shrink-0">Heading 2</p>
-        <p className="opacity-0 relative shrink-0">Heading 3</p>
-      </div>
-      <div className="absolute bottom-[64px] content-stretch flex gap-[8px] items-center left-[1272px] top-auto">
-        <ComponentBackgroundImageAndText1 text="Join Waitlist" />
-      </div>
-      <div className="absolute content-stretch flex items-center left-[159px] top-[1794px]">
-        <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#eb4335] left-1/2 mix-blend-color-burn rounded-[4px] size-[8px] top-1/2" />
-        <div className="bg-[#eb4335] rounded-[999px] shrink-0 size-[2px]" />
+      <div className="absolute bottom-[48px] left-1/2 z-40 flex w-full max-w-[1512px] -translate-x-1/2 flex-col items-center justify-center gap-6 px-4 sm:px-8 md:flex-row md:items-center md:justify-between md:px-[137px]">
+        <div
+          id="landing-footer"
+          className="content-stretch flex min-w-0 flex-col items-center not-italic text-center whitespace-nowrap scroll-mt-28"
+        >
+          <p className="font-continuum leading-[47.662px] relative shrink-0 text-[#0b191f] text-[42.509px] tracking-[-0.8502px]">Continuum</p>
+          <p className="font-['Sathu:Regular',sans-serif] leading-[normal] opacity-80 relative shrink-0 text-[#252014] text-[15.458px] tracking-[-0.1546px]">Time track with one click.</p>
+        </div>
+        <div className="shrink-0">
+          <ComponentBackgroundImageAndText1 text="Join Waitlist" />
+        </div>
       </div>
     </div>
   );

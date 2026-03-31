@@ -1,15 +1,16 @@
 import React, { useState, useRef, useEffect } from "react";
 import svgPaths from "./landing-mobile-svg";
 import { useInvoiceCarousel, InvoiceCardStrip } from "@/components/InvoiceCardCarousel";
+import ContinuumAiFeatures from "@/components/ContinuumAiFeatures";
 import { toast } from "sonner";
 import { postWaitlistSignup } from "@/api/waitlist";
 import { playWaitlistSuccessSound } from "@/lib/playWaitlistSuccessSound";
 import { scrollToWaitlist } from "@/lib/scrollToWaitlist";
 
 /** Hero panel images under `public/landing/`. */
-const imgWip = "/landing/83a55141b039a44613c6c93d2b20289d9128f6c1.png";
-const imgWip1 = "/landing/4c18501708f09ce453837dc0d00f9f3592d6896b.png";
-const imgWip2 = "/landing/d50090486565d73083f0d763cbc6c9cf009a03fe.png";
+const imgWip = "/landing/hero-wip-left.png";
+const imgWip1 = "/landing/hero-wip-right.png";
+const imgWip2 = "/landing/hero-wip-center.png";
 
 function MobileWaitlistForm() {
   const [email, setEmail] = useState("");
@@ -89,9 +90,8 @@ function MobileWaitlistForm() {
 function Wip() {
   return (
     <div className="h-[107.539px] pointer-events-none relative rounded-[2.614px] w-[112.606px]" data-name="WIP">
-      <div aria-hidden="true" className="absolute inset-0 rounded-[2.614px]">
-        <div className="absolute inset-0 rounded-[2.614px]" style={{ backgroundImage: "linear-gradient(0deg, rgba(178, 230, 247, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), linear-gradient(90deg, rgb(249, 250, 251) 0%, rgb(249, 250, 251) 100%)" }} />
-        <img alt="" className="absolute max-w-none object-cover rounded-[2.614px] size-full" src={imgWip} />
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-[2.614px]">
+        <img alt="" className="absolute max-w-none object-cover object-left-top rounded-[2.614px] size-full" src={imgWip} />
       </div>
       <div aria-hidden="true" className="absolute border-[#ededed] border-[0.288px] border-solid inset-0 rounded-[2.614px] shadow-[0px_33.067px_9.201px_0px_rgba(26,58,84,0),0px_21.278px_8.339px_0px_rgba(26,58,84,0.01),0px_11.789px_7.188px_0px_rgba(26,58,84,0.05),0px_5.176px_5.176px_0px_rgba(26,58,84,0.09),0px_1.438px_2.875px_0px_rgba(26,58,84,0.1)]" />
     </div>
@@ -101,9 +101,8 @@ function Wip() {
 function Wip1() {
   return (
     <div className="h-[107.54px] pointer-events-none relative rounded-[1.473px] w-[112.607px]" data-name="WIP">
-      <div aria-hidden="true" className="absolute inset-0 rounded-[1.473px]">
-        <div className="absolute inset-0 rounded-[1.473px]" style={{ backgroundImage: "linear-gradient(0deg, rgba(178, 230, 247, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), linear-gradient(90deg, rgb(249, 250, 251) 0%, rgb(249, 250, 251) 100%)" }} />
-        <img alt="" className="absolute max-w-none object-cover rounded-[1.473px] size-full" src={imgWip1} />
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-[1.473px]">
+        <img alt="" className="absolute max-w-none object-cover object-left-top rounded-[1.473px] size-full" src={imgWip1} />
       </div>
       <div aria-hidden="true" className="absolute border-[#ededed] border-[0.288px] border-solid inset-0 rounded-[1.473px] shadow-[0px_33.067px_9.201px_0px_rgba(26,58,84,0),0px_21.278px_8.339px_0px_rgba(26,58,84,0.01),0px_11.789px_7.189px_0px_rgba(26,58,84,0.05),0px_5.176px_5.176px_0px_rgba(26,58,84,0.09),0px_1.438px_2.875px_0px_rgba(26,58,84,0.1)]" />
     </div>
@@ -113,9 +112,8 @@ function Wip1() {
 function Wip2() {
   return (
     <div className="-translate-x-1/2 absolute h-[137.179px] left-[calc(50%+0.11px)] pointer-events-none rounded-[2.005px] top-[6.65px] w-[211.216px]" data-name="WIP">
-      <div aria-hidden="true" className="absolute inset-0 rounded-[2.005px]">
-        <div className="absolute inset-0 rounded-[2.005px]" style={{ backgroundImage: "linear-gradient(0deg, rgba(178, 230, 247, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), linear-gradient(90deg, rgb(249, 250, 251) 0%, rgb(249, 250, 251) 100%)" }} />
-        <img alt="" className="absolute max-w-none object-cover rounded-[2.005px] size-full" src={imgWip2} />
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-[2.005px]">
+        <img alt="" className="absolute max-w-none object-cover object-left-top rounded-[2.005px] size-full" src={imgWip2} />
       </div>
       <div aria-hidden="true" className="absolute border-[#ededed] border-[0.367px] border-solid inset-0 rounded-[2.005px] shadow-[0px_79.78px_22.338px_0px_rgba(26,58,84,0),0px_51.059px_20.477px_0px_rgba(26,58,84,0.01),0px_28.721px_17.286px_0px_rgba(26,58,84,0.04),0px_12.765px_12.765px_0px_rgba(26,58,84,0.07),0px_3.191px_6.914px_0px_rgba(26,58,84,0.08)]" />
     </div>
@@ -180,20 +178,33 @@ function Frame127() {
   );
 }
 
-function Frame4() {
+function Component5() {
   return (
-    <div className="absolute bottom-[52px] content-stretch flex flex-col items-center left-[101.3px] not-italic text-center top-auto whitespace-nowrap">
-      <p className="font-continuum leading-[32.012px] relative shrink-0 text-[#0b191f] text-[28.551px] tracking-[-0.571px]">Continuum</p>
-      <p className="font-['Sathu:Regular',sans-serif] leading-[normal] opacity-80 relative shrink-0 text-[#252014] text-[10.382px] tracking-[-0.1038px]">Time track with one click.</p>
-    </div>
+    <button
+      type="button"
+      onClick={scrollToWaitlist}
+      className="content-stretch flex cursor-pointer gap-[6px] h-[32px] items-center justify-center border-0 px-[16px] py-[8px] relative rounded-[8px] shrink-0"
+      data-name="Component 7"
+      style={{ backgroundImage: "linear-gradient(167.275deg, rgb(36, 181, 248) 123.02%, rgb(85, 33, 254) 802.55%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}
+    >
+      <div aria-hidden="true" className="absolute border border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[0px_12px_3px_0px_rgba(45,154,249,0),0px_8px_3px_0px_rgba(45,154,249,0.03),0px_4px_3px_0px_rgba(45,154,249,0.11),0px_2px_2px_0px_rgba(45,154,249,0.19),0px_0px_1px_0px_rgba(45,154,249,0.21)]" />
+      <p className="font-['Satoshi:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[14px] text-white whitespace-nowrap">Join Waitlist</p>
+    </button>
   );
 }
 
-function Frame136() {
+function Frame4() {
   return (
-    <div className="absolute left-[159px] top-[1794px] flex size-[8px] items-center justify-center">
-      <span className="absolute inset-0 rounded-full bg-white border border-[#eb4335]" aria-hidden />
-      <span className="relative size-[3px] shrink-0 rounded-none bg-[#eb4335]" aria-hidden />
+    <div className="-translate-x-1/2 absolute bottom-[40px] left-1/2 z-10 flex max-w-[min(100%,370px)] flex-col items-center text-center not-italic">
+      <div className="flex flex-col items-center gap-[6px]">
+        <p className="font-continuum relative shrink-0 text-[#0b191f] text-[28.551px] leading-[32.012px] tracking-[-0.571px]">Continuum</p>
+        <p className="font-['Sathu:Regular',sans-serif] relative shrink-0 text-[10.38px] leading-[normal] tracking-[-0.1038px] text-[#252014] opacity-80">
+          Time track with one click.
+        </p>
+      </div>
+      <div className="mt-[24px] flex w-full shrink-0 justify-center">
+        <Component5 />
+      </div>
     </div>
   );
 }
@@ -467,25 +478,40 @@ function Frame150() {
   return (
     <div className="absolute h-[170px] left-[11px] top-[166px] w-[343px]">
       <Frame138 />
-      <div className="-translate-x-1/2 absolute h-[13.293px] left-[calc(50%+0.28px)] top-[44.94px] w-0">
-        <div className="absolute inset-[-4.76%_-0.63px]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1.26596 14.5585">
-            <path d="M0.632979 0.632979V13.9255" id="Vector 21" stroke="var(--stroke-0, #EB4335)" strokeDasharray="5.7 5.7" strokeLinecap="round" strokeWidth="1.26596" />
-          </svg>
-        </div>
+      <div className="-translate-x-1/2 absolute left-[calc(50%+0.28px)] top-[44.94px] flex h-[13.293px] w-[2px] items-stretch justify-center">
+        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1.26596 14.5585">
+          <path d="M0.632979 0.632979V13.9255" id="Vector 21" stroke="#EB4335" strokeDasharray="5.7 5.7" strokeLinecap="round" strokeWidth="1.26596" />
+        </svg>
       </div>
-      <div className="-translate-x-1/2 absolute h-[10.761px] left-[calc(50%+0.28px)] top-[107.61px] w-0">
-        <div className="absolute inset-[-5.88%_-3.38px_-31.37%_-3.38px]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 6.75177 14.7695">
-            <path d={svgPaths.p26085000} fill="url(#paint0_linear_1_736)" id="Vector 22" />
-            <defs>
-              <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_736" x1="3.87589" x2="3.87589" y1="0.632979" y2="11.3936">
-                <stop stopColor="#EB4335" />
-                <stop offset="1" stopColor="#FC5244" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+      <div
+        aria-hidden
+        className="-translate-x-1/2 absolute left-[calc(50%+0.28px)] top-[58.233px] flex h-[1.27px] w-[2px] items-stretch justify-center"
+      >
+        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2 2">
+          <path d="M1 0V2" stroke="#EB4335" strokeDasharray="9 9" strokeLinecap="round" strokeWidth="2" />
+        </svg>
+      </div>
+      <div
+        aria-hidden
+        className="-translate-x-1/2 absolute left-[calc(50%+0.28px)] top-[81px] flex h-[5.06px] w-[2px] items-stretch justify-center"
+      >
+        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2 8">
+          <path d="M1 0V8" stroke="#EB4335" strokeDasharray="9 9" strokeLinecap="round" strokeWidth="2" />
+        </svg>
+      </div>
+      <div
+        aria-hidden
+        className="-translate-x-1/2 absolute left-[calc(50%+0.28px)] top-[105.05px] flex h-[2.56px] w-[2px] items-stretch justify-center"
+      >
+        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2 4">
+          <path d="M1 0V4" stroke="#EB4335" strokeDasharray="9 9" strokeLinecap="round" strokeWidth="2" />
+        </svg>
+      </div>
+      <div
+        aria-hidden
+        className="-translate-x-1/2 absolute left-[calc(50%+0.28px)] top-[107.61px] flex h-[10.761px] w-[11px] items-center justify-center"
+      >
+        <div className="size-[6px] shrink-0 rounded-full bg-gradient-to-b from-[#EB4335] to-[#FC5244]" />
       </div>
       <Component12 />
       <Component11 />
@@ -1113,40 +1139,18 @@ function Frame120() {
 
 function Frame154() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[40px] items-start left-[16px] top-[867px] w-[370px]">
+    <div className="absolute content-stretch flex flex-col gap-[40px] items-start left-[16px] top-[867px] w-[370px] pb-[360px]">
       <Frame121 />
       <Frame119 />
       <Frame120 />
-    </div>
-  );
-}
-
-function Component5() {
-  return (
-    <button
-      type="button"
-      onClick={scrollToWaitlist}
-      className="content-stretch flex cursor-pointer gap-[6px] h-[32px] items-center justify-center border-0 px-[16px] py-[8px] relative rounded-[8px] shrink-0"
-      data-name="Component 7"
-      style={{ backgroundImage: "linear-gradient(167.275deg, rgb(36, 181, 248) 123.02%, rgb(85, 33, 254) 802.55%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}
-    >
-      <div aria-hidden="true" className="absolute border border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[0px_12px_3px_0px_rgba(45,154,249,0),0px_8px_3px_0px_rgba(45,154,249,0.03),0px_4px_3px_0px_rgba(45,154,249,0.11),0px_2px_2px_0px_rgba(45,154,249,0.19),0px_0px_1px_0px_rgba(45,154,249,0.21)]" />
-      <p className="font-['Satoshi:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[14px] text-white whitespace-nowrap">Join Waitlist</p>
-    </button>
-  );
-}
-
-function Frame155() {
-  return (
-    <div className="absolute bottom-[12px] content-stretch flex gap-[8px] items-center left-[145px] top-auto">
-      <Component5 />
+      <ContinuumAiFeatures variant="mobile" />
     </div>
   );
 }
 
 export default function LandingPageMobile() {
   return (
-    <div className="relative min-h-[2478px] w-full overflow-x-hidden bg-[#f9fafb]" data-name="Landing page - Vertical">
+    <div className="relative min-h-[4200px] w-full overflow-x-hidden bg-[#f9fafb]" data-name="Landing page - Vertical">
       <div
         className="pointer-events-none absolute left-1/2 top-[120px] z-0 h-[420px] w-[min(220%,52rem)] -translate-x-1/2 rounded-[50%] bg-[#EEF9F9]/[0.55] blur-[72px]"
         aria-hidden
@@ -1171,17 +1175,8 @@ export default function LandingPageMobile() {
         </div>
       </div>
       <div className="-translate-x-1/2 absolute bg-[#f9fafb] h-[1020px] left-1/2 top-[1458px] w-full max-w-[402px]" />
-      {/* Clip height so curves do not extend below the footer Join Waitlist (~2474px) */}
-      <div className="absolute h-[282px] left-[-123.73px] top-[2192px] w-[1823.234px] overflow-hidden">
-        <div className="absolute inset-[-3.17%_0_-3.17%_-0.66%]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1835.7 402.904">
-            <path d={svgPaths.p296fcf40} id="Vector 12" stroke="var(--stroke-0, #E4EAEC)" strokeWidth="24" />
-          </svg>
-        </div>
-      </div>
       <Frame127 />
       <Frame4 />
-      <Frame136 />
       <p className="-translate-x-1/2 absolute bg-clip-text font-['Satoshi:Medium',sans-serif] leading-[0] left-1/2 not-italic text-[0px] text-[transparent] text-center top-[142px] w-[307.565px]" style={{ backgroundImage: "linear-gradient(114.626deg, rgb(36, 181, 248) 4.6217%, rgb(85, 33, 254) 148.53%)" }}>
         <span className="bg-clip-text font-continuum leading-[1.04] text-[36px]" style={{ backgroundImage: "linear-gradient(114.626deg, rgb(36, 181, 248) 4.6217%, rgb(85, 33, 254) 148.53%)" }}>
           Continuum
@@ -1192,7 +1187,6 @@ export default function LandingPageMobile() {
       <Component1 />
       <Frame115 />
       <Frame154 />
-      <Frame155 />
     </div>
   );
 }

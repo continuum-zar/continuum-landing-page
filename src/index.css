@@ -18,6 +18,12 @@ body {
   font-weight: 400;
 }
 
+/* Continuum AI section title: Sarina medium (500) */
+.font-continuum-ai-wordmark {
+  font-family: 'Sarina', sans-serif;
+  font-weight: 500;
+}
+
 @keyframes marquee-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
