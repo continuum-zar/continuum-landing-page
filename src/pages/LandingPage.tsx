@@ -359,18 +359,22 @@ export default function LandingPage() {
         id="landing-hero"
         className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[24px] items-center left-1/2 top-[190px] w-[776px] scroll-mt-28"
       >
-        <div className="content-stretch flex flex-col font-['Satoshi:Medium',sans-serif] gap-[16px] items-center not-italic relative shrink-0 text-center w-full">
-          <p className="bg-clip-text leading-[0] min-w-full relative shrink-0 text-[62px] text-[transparent] w-[min-content]" style={{ backgroundImage: "linear-gradient(135.275deg, rgb(36, 181, 248) 4.6217%, rgb(85, 33, 254) 148.53%)" }}>
-            <span className="bg-clip-text font-continuum leading-[1.04]" style={{ backgroundImage: "linear-gradient(135.275deg, rgb(36, 181, 248) 4.6217%, rgb(85, 33, 254) 148.53%)" }}>
+        <div className="relative flex h-[200px] w-full shrink-0 flex-col items-center justify-center gap-4 overflow-hidden px-2 text-center">
+          <h1 className="max-w-[680px] text-balance text-[#0b191f]">
+            <span
+              className="font-continuum bg-clip-text text-[62px] leading-[1.04] italic text-transparent"
+              style={{
+                backgroundImage: "linear-gradient(99.31deg, #24B5F8 4.62%, #5521FE 148.53%)",
+              }}
+            >
               Continuum
             </span>
-            <span className="leading-[1.04]">{` connects delivery with profitability.`}</span>
-          </p>
-          <p className="leading-[normal] relative shrink-0 text-[#606d76] text-[16px] w-[580px]">The operating system for modern software teams. Seamlessly bridge the gap between agile sprint planning, precise time tracking, and client invoicing.</p>
-          <p className="-translate-x-1/2 absolute leading-[0] left-[388px] text-[#0b191f] text-[62px] top-0 w-[776px]">
-            <span className="font-continuum leading-[1.04] text-[rgba(11,25,31,0)]">Continuum</span>
-            <span className="leading-[1.04] text-[rgba(11,25,31,0)]">{` `}</span>
-            <span className="leading-[1.04]">connects delivery with profitability.</span>
+            <span className="font-['Satoshi:Bold',sans-serif] text-[40px] leading-[1.05]">
+              {` cuts through the noise of dense project management`}
+            </span>
+          </h1>
+          <p className="max-w-[580px] text-balance text-[15px] font-['Satoshi:Medium',sans-serif] leading-[1.32] text-[#606d76]">
+            Leave behind the dense, tangled complexity of legacy tools. Continuum provides a clear hierarchy giving project managers and teams a frictionless way to execute.
           </p>
         </div>
         <ComponentBackgroundImageAndText text="Join Waitlist" />
@@ -424,12 +428,15 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="content-stretch flex flex-col gap-[36px] items-center relative shrink-0 w-full">
-            <div className="content-stretch flex flex-col font-['Satoshi:Medium',sans-serif] gap-[24px] items-center not-italic relative shrink-0 text-center">
-              <p className="leading-[0] relative shrink-0 text-[#0b191f] text-[38.319px] tracking-[-0.48px] tracking-[-1.1496px] whitespace-nowrap">
-                <span className="leading-[1.04]">{`Frictionless `}</span>
-                <span className="font-['Satoshi:Bold',sans-serif] leading-[1.04]">Time Logging</span>
-              </p>
-              <p className="leading-[26px] relative shrink-0 text-[#606d76] text-[16px] w-[440px]">Log hours without leaving your workflow. Track time directly on tasks or retroactively fill your week in seconds, not hours.</p>
+            <div className="relative flex max-h-[210px] w-full min-h-0 shrink-0 flex-col items-center overflow-hidden text-center not-italic">
+              <div className="content-stretch flex w-full max-w-[604px] flex-col gap-5 font-['Satoshi:Medium',sans-serif]">
+                <p className="text-balance font-['Satoshi:Bold',sans-serif] text-[38.319px] leading-[1.08] tracking-[-0.48px] text-[#0b191f]">
+                  Frictionless Execution & Recording
+                </p>
+                <p className="text-balance text-[15px] leading-[23px] text-[#606d76]">
+                  Stop fighting your tools to track work. Team members simply click to start recording time directly on a task.
+                </p>
+              </div>
             </div>
           </div>
           <div className="absolute h-[268.501px] left-1/2 -translate-x-1/2 top-[262px] w-[750px]">
@@ -583,9 +590,15 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0">
-            <div className="content-stretch flex flex-col font-['Satoshi:Medium',sans-serif] gap-[24px] items-center not-italic relative shrink-0 text-center">
-              <p className="leading-[1.04] relative shrink-0 text-[#0b191f] text-[38.319px] w-[377px]">Integrated Invoicing</p>
-              <p className="leading-[26px] relative shrink-0 text-[#606d76] text-[16px] w-[332px]">Turn billable hours into professional invoices with one click.</p>
+            <div className="relative flex max-h-[120px] w-full min-h-0 shrink-0 flex-col items-center overflow-hidden text-center not-italic">
+              <div className="content-stretch flex w-full max-w-[377px] flex-col gap-4 font-['Satoshi:Medium',sans-serif]">
+                <p className="text-balance font-['Satoshi:Bold',sans-serif] text-[38.319px] leading-[1.08] text-[#0b191f]">
+                  Seamless Invoicing
+                </p>
+                <p className="text-balance text-[15px] leading-[22px] text-[#606d76]">
+                  No more chasing down timesheets or reconciling data across disconnected systems.
+                </p>
+              </div>
             </div>
           </div>
           <div className="-translate-x-1/2 absolute flex h-[513.342px] items-center justify-center left-[calc(50%+71.4px)] top-[157px] w-[957.794px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "1492" } as React.CSSProperties}>
@@ -817,9 +830,15 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="content-stretch flex flex-col gap-[36px] items-start relative shrink-0">
-                <div className="content-stretch flex flex-col font-['Satoshi:Medium',sans-serif] gap-[24px] items-start not-italic relative shrink-0">
-                  <p className="leading-[1.04] relative shrink-0 text-[#0b191f] text-[38.319px] text-center whitespace-nowrap">Real-time Project Health</p>
-                  <p className="leading-[26px] relative shrink-0 text-[#606d76] text-[16px] w-[332px]">{`Never be surprised by a missed deadline. Track velocity and see instantly if a project is "Project On Track" or "At Risk."`}</p>
+                <div className="relative flex max-h-[280px] w-full min-w-0 shrink-0 flex-col items-start overflow-hidden not-italic">
+                  <div className="content-stretch flex w-full max-w-[332px] flex-col gap-5 font-['Satoshi:Medium',sans-serif]">
+                    <p className="text-balance text-center font-['Satoshi:Bold',sans-serif] text-[38.319px] leading-[1.08] text-[#0b191f]">
+                      Weighted Project Health
+                    </p>
+                    <p className="text-balance text-[15px] leading-[23px] text-[#606d76]">
+                      Continuum calculates project momentum using a weighted system based on the tasks inside each sprint. See instantly if a milestone is on track or at risk, without ever having to micromanage your developers.
+                    </p>
+                  </div>
                 </div>
                 <ComponentBackgroundImageAndText text="Start for free" additionalClassNames="opacity-0" asLink={false} />
               </div>

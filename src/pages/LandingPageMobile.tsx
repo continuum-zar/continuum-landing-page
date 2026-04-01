@@ -195,17 +195,17 @@ function Component5() {
 
 function Frame4() {
   return (
-    <div className="-translate-x-1/2 absolute bottom-[40px] left-1/2 z-10 flex max-w-[min(100%,370px)] flex-col items-center text-center not-italic">
+    <footer className="relative z-10 flex w-full flex-col items-center gap-6 pt-2 text-center not-italic">
       <div className="flex flex-col items-center gap-[6px]">
         <p className="font-continuum relative shrink-0 text-[#0b191f] text-[28.551px] leading-[32.012px] tracking-[-0.571px]">Continuum</p>
         <p className="font-['Sathu:Regular',sans-serif] relative shrink-0 text-[10.38px] leading-[normal] tracking-[-0.1038px] text-[#252014] opacity-80">
           Time track with one click.
         </p>
       </div>
-      <div className="mt-[24px] flex w-full shrink-0 justify-center">
+      <div className="flex w-full shrink-0 justify-center pb-[max(0.75rem,env(safe-area-inset-bottom))]">
         <Component5 />
       </div>
-    </div>
+    </footer>
   );
 }
 
@@ -238,12 +238,15 @@ function Frame115() {
 
 function Frame122() {
   return (
-    <div className="content-stretch flex flex-col font-['Satoshi:Medium',sans-serif] gap-[14px] items-center not-italic relative shrink-0 text-center">
-      <p className="leading-[0] relative shrink-0 text-[#0b191f] text-[24.255px] tracking-[-0.7277px] whitespace-nowrap">
-        <span className="leading-[1.04] tracking-[-0.48px]">{`Frictionless `}</span>
-        <span className="font-['Satoshi:Bold',sans-serif] leading-[1.04] tracking-[-0.48px]">Time Logging</span>
-      </p>
-      <p className="leading-[16.457px] relative shrink-0 text-[#606d76] text-[14px] w-[278.511px]">Log hours without leaving your workflow. Track time directly on tasks or retroactively fill your week in seconds, not hours.</p>
+    <div className="relative flex max-h-[118px] w-full min-h-0 shrink-0 flex-col items-center overflow-hidden text-center not-italic">
+      <div className="content-stretch flex w-full max-w-[278.511px] flex-col gap-2.5 font-['Satoshi:Medium',sans-serif]">
+        <p className="text-balance font-['Satoshi:Bold',sans-serif] text-[24.255px] leading-[1.12] tracking-[-0.48px] text-[#0b191f]">
+          Frictionless Execution & Recording
+        </p>
+        <p className="text-balance text-[13px] leading-[16.5px] text-[#606d76]">
+          Stop fighting your tools to track work. Team members simply click to start recording time directly on a task.
+        </p>
+      </div>
     </div>
   );
 }
@@ -550,9 +553,15 @@ function Frame121() {
 
 function Frame123() {
   return (
-    <div className="content-stretch flex flex-col font-['Satoshi:Medium',sans-serif] gap-[14px] items-center not-italic relative shrink-0 text-center w-full">
-      <p className="leading-[1.04] relative shrink-0 text-[#0b191f] text-[24.26px] w-full">Integrated Invoicing</p>
-      <p className="leading-[16.5px] relative shrink-0 text-[#606d76] text-[14px] w-full">Turn billable hours into professional invoices with one click.</p>
+    <div className="relative flex max-h-[100px] w-full min-h-0 shrink-0 flex-col items-center overflow-hidden text-center not-italic">
+      <div className="content-stretch flex w-full flex-col gap-2.5 font-['Satoshi:Medium',sans-serif]">
+        <p className="text-balance font-['Satoshi:Bold',sans-serif] text-[24.26px] leading-[1.12] text-[#0b191f]">
+          Seamless Invoicing
+        </p>
+        <p className="text-balance text-[13px] leading-[16.5px] text-[#606d76]">
+          No more chasing down timesheets or reconciling data across disconnected systems.
+        </p>
+      </div>
     </div>
   );
 }
@@ -1031,9 +1040,15 @@ function Frame119() {
 
 function Frame133() {
   return (
-    <div className="content-stretch flex flex-col font-['Satoshi:Medium',sans-serif] gap-[14px] items-center not-italic relative shrink-0 text-center w-full">
-      <p className="leading-[1.04] relative shrink-0 text-[#0b191f] text-[24.26px] w-full">Real-time Project Health</p>
-      <p className="leading-[16.5px] relative shrink-0 text-[#606d76] text-[14px] w-full">{`Never be surprised by a missed deadline. Track velocity and see instantly if a project is "Project On Track" or "At Risk."`}</p>
+    <div className="relative flex max-h-[200px] w-full min-h-0 shrink-0 flex-col items-center overflow-hidden text-center not-italic">
+      <div className="content-stretch flex w-full flex-col gap-2.5 font-['Satoshi:Medium',sans-serif]">
+        <p className="text-balance font-['Satoshi:Bold',sans-serif] text-[24.26px] leading-[1.12] text-[#0b191f]">
+          Weighted Project Health
+        </p>
+        <p className="text-balance text-[13px] leading-[16.5px] text-[#606d76]">
+          Continuum calculates project momentum using a weighted system based on the tasks inside each sprint. See instantly if a milestone is on track or at risk, without ever having to micromanage your developers.
+        </p>
+      </div>
     </div>
   );
 }
@@ -1139,18 +1154,19 @@ function Frame120() {
 
 function Frame154() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[40px] items-start left-[16px] top-[867px] w-[370px] pb-[360px]">
+    <div className="relative z-10 mt-[867px] ml-4 flex w-[370px] max-w-[calc(100%-32px)] shrink-0 flex-col gap-[40px] items-start">
       <Frame121 />
       <Frame119 />
       <Frame120 />
       <ContinuumAiFeatures variant="mobile" />
+      <Frame4 />
     </div>
   );
 }
 
 export default function LandingPageMobile() {
   return (
-    <div className="relative min-h-[4200px] w-full overflow-x-hidden bg-[#f9fafb]" data-name="Landing page - Vertical">
+    <div className="relative min-h-[100vh] w-full overflow-x-hidden bg-[#f9fafb]" data-name="Landing page - Vertical">
       <div
         className="pointer-events-none absolute left-1/2 top-[120px] z-0 h-[420px] w-[min(220%,52rem)] -translate-x-1/2 rounded-[50%] bg-[#EEF9F9]/[0.55] blur-[72px]"
         aria-hidden
@@ -1176,14 +1192,27 @@ export default function LandingPageMobile() {
       </div>
       <div className="-translate-x-1/2 absolute bg-[#f9fafb] h-[1020px] left-1/2 top-[1458px] w-full max-w-[402px]" />
       <Frame127 />
-      <Frame4 />
-      <p className="-translate-x-1/2 absolute bg-clip-text font-['Satoshi:Medium',sans-serif] leading-[0] left-1/2 not-italic text-[0px] text-[transparent] text-center top-[142px] w-[307.565px]" style={{ backgroundImage: "linear-gradient(114.626deg, rgb(36, 181, 248) 4.6217%, rgb(85, 33, 254) 148.53%)" }}>
-        <span className="bg-clip-text font-continuum leading-[1.04] text-[36px]" style={{ backgroundImage: "linear-gradient(114.626deg, rgb(36, 181, 248) 4.6217%, rgb(85, 33, 254) 148.53%)" }}>
-          Continuum
-        </span>
-        <span className="leading-[1.04] text-[36px]">{` `}</span>
-        <span className="leading-[1.04] text-[#0b191f] text-[36px]">connects delivery with profitability.</span>
-      </p>
+      <div
+        id="landing-hero"
+        className="-translate-x-1/2 absolute left-1/2 top-[110px] flex h-[150px] w-[min(calc(100%-32px),360px)] scroll-mt-28 flex-col items-center justify-start gap-3 overflow-hidden px-2 text-center"
+      >
+        <h1 className="min-h-0 w-full max-w-[307px] text-balance text-[#0b191f]">
+          <span
+            className="font-continuum bg-clip-text text-[32px] leading-[1.04] italic text-transparent"
+            style={{
+              backgroundImage: "linear-gradient(99.31deg, #24B5F8 4.62%, #5521FE 148.53%)",
+            }}
+          >
+            Continuum
+          </span>
+          <span className="font-['Satoshi:Bold',sans-serif] text-[23px] leading-[1.08]">
+            {` cuts through the noise of dense project management`}
+            </span>
+        </h1>
+        <p className="w-full max-w-[307px] shrink-0 text-balance text-[11px] font-['Satoshi:Medium',sans-serif] leading-[1.35] text-[#606d76]">
+          Leave behind the dense, tangled complexity of legacy tools. Continuum provides a clear hierarchy giving project managers and teams a frictionless way to execute.
+        </p>
+      </div>
       <Component1 />
       <Frame115 />
       <Frame154 />
