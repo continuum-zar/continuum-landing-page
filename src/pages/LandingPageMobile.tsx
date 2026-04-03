@@ -8,9 +8,9 @@ import { playWaitlistSuccessSound } from "@/lib/playWaitlistSuccessSound";
 import { scrollToWaitlist } from "@/lib/scrollToWaitlist";
 
 /** Hero panel images under `public/landing/`. */
-const imgWip = "/landing/hero-wip-left.png";
-const imgWip1 = "/landing/hero-wip-right.png";
-const imgWip2 = "/landing/hero-wip-center.png";
+const imgWip = "/landing/hero-wip-left.webp";
+const imgWip1 = "/landing/hero-wip-right.webp";
+const imgWip2 = "/landing/hero-wip-center.webp";
 
 function MobileWaitlistForm() {
   const [email, setEmail] = useState("");
@@ -91,7 +91,7 @@ function Wip() {
   return (
     <div className="h-[107.539px] pointer-events-none relative rounded-[2.614px] w-[112.606px]" data-name="WIP">
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-[2.614px]">
-        <img alt="" className="absolute max-w-none object-cover object-left-top rounded-[2.614px] size-full" src={imgWip} />
+        <img alt="" fetchPriority="high" decoding="async" className="absolute max-w-none object-cover object-left-top rounded-[2.614px] size-full" src={imgWip} />
       </div>
       <div aria-hidden="true" className="absolute border-[#ededed] border-[0.288px] border-solid inset-0 rounded-[2.614px] shadow-[0px_33.067px_9.201px_0px_rgba(26,58,84,0),0px_21.278px_8.339px_0px_rgba(26,58,84,0.01),0px_11.789px_7.188px_0px_rgba(26,58,84,0.05),0px_5.176px_5.176px_0px_rgba(26,58,84,0.09),0px_1.438px_2.875px_0px_rgba(26,58,84,0.1)]" />
     </div>
@@ -102,7 +102,7 @@ function Wip1() {
   return (
     <div className="h-[107.54px] pointer-events-none relative rounded-[1.473px] w-[112.607px]" data-name="WIP">
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-[1.473px]">
-        <img alt="" className="absolute max-w-none object-cover object-left-top rounded-[1.473px] size-full" src={imgWip1} />
+        <img alt="" fetchPriority="high" decoding="async" className="absolute max-w-none object-cover object-left-top rounded-[1.473px] size-full" src={imgWip1} />
       </div>
       <div aria-hidden="true" className="absolute border-[#ededed] border-[0.288px] border-solid inset-0 rounded-[1.473px] shadow-[0px_33.067px_9.201px_0px_rgba(26,58,84,0),0px_21.278px_8.339px_0px_rgba(26,58,84,0.01),0px_11.789px_7.189px_0px_rgba(26,58,84,0.05),0px_5.176px_5.176px_0px_rgba(26,58,84,0.09),0px_1.438px_2.875px_0px_rgba(26,58,84,0.1)]" />
     </div>
@@ -113,7 +113,7 @@ function Wip2() {
   return (
     <div className="-translate-x-1/2 absolute h-[137.179px] left-[calc(50%+0.11px)] pointer-events-none rounded-[2.005px] top-[6.65px] w-[211.216px]" data-name="WIP">
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-[2.005px]">
-        <img alt="" className="absolute max-w-none object-cover object-left-top rounded-[2.005px] size-full" src={imgWip2} />
+        <img alt="" fetchPriority="high" decoding="async" className="absolute max-w-none object-cover object-left-top rounded-[2.005px] size-full" src={imgWip2} />
       </div>
       <div aria-hidden="true" className="absolute border-[#ededed] border-[0.367px] border-solid inset-0 rounded-[2.005px] shadow-[0px_79.78px_22.338px_0px_rgba(26,58,84,0),0px_51.059px_20.477px_0px_rgba(26,58,84,0.01),0px_28.721px_17.286px_0px_rgba(26,58,84,0.04),0px_12.765px_12.765px_0px_rgba(26,58,84,0.07),0px_3.191px_6.914px_0px_rgba(26,58,84,0.08)]" />
     </div>
@@ -296,14 +296,14 @@ const mobileBottomRow = [
 function Frame138() {
   return (
     <div className="absolute flex flex-col gap-[3.165px] left-0 top-[59.5px] w-full overflow-hidden">
-      <div className="flex w-max gap-[3.165px]" style={{ animation: "marquee-left 25s linear infinite" }}>
+      <div className="flex w-max gap-[3.165px] marquee-container" style={{ animation: "marquee-left 25s linear infinite" }}>
         {[...Array(2)].map((_, i) => (
           <div key={i} className="flex gap-[3.165px] shrink-0">
             {mobileTopRow.map((t) => <MobileTag key={t} text={t} />)}
           </div>
         ))}
       </div>
-      <div className="flex w-max gap-[3.165px]" style={{ animation: "marquee-right 25s linear infinite" }}>
+      <div className="flex w-max gap-[3.165px] marquee-container" style={{ animation: "marquee-right 25s linear infinite" }}>
         {[...Array(2)].map((_, i) => (
           <div key={i} className="flex gap-[3.165px] shrink-0">
             {mobileBottomRow.map((t) => <MobileTag key={t} text={t} />)}

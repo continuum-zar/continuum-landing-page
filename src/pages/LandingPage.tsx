@@ -80,9 +80,9 @@ function LandingWaitlistForm() {
 }
 
 /** Hero panel images — exported from Figma (left 52:12665, right 52:12666, center 52:12667). */
-const imgWip = "/landing/hero-wip-left.png";
-const imgWip1 = "/landing/hero-wip-right.png";
-const imgWip2 = "/landing/hero-wip-center.png";
+const imgWip = "/landing/hero-wip-left.webp";
+const imgWip1 = "/landing/hero-wip-right.webp";
+const imgWip2 = "/landing/hero-wip-center.webp";
 
 function BackgroundImage10({ children }: React.PropsWithChildren) {
   return (
@@ -332,7 +332,7 @@ export default function LandingPage() {
           <div className="flex-none rotate-[-5.98deg]">
             <div className="h-[404.386px] pointer-events-none relative rounded-[9.829px] w-[423.44px]" data-name="WIP">
               <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-[9.829px]">
-                <img alt="" className="absolute max-w-none object-cover object-left-top rounded-[9.829px] size-full" src={imgWip} />
+                <img alt="" fetchPriority="high" decoding="async" className="absolute max-w-none object-cover object-left-top rounded-[9.829px] size-full" src={imgWip} />
               </div>
               <div aria-hidden="true" className="absolute border-[#ededed] border-[1.081px] border-solid inset-0 rounded-[9.829px] shadow-[0px_124.343px_34.6px_0px_rgba(26,58,84,0),0px_80.012px_31.356px_0px_rgba(26,58,84,0.01),0px_44.331px_27.031px_0px_rgba(26,58,84,0.05),0px_19.462px_19.462px_0px_rgba(26,58,84,0.09),0px_5.406px_10.812px_0px_rgba(26,58,84,0.1)]" />
             </div>
@@ -342,7 +342,7 @@ export default function LandingPage() {
           <div className="flex-none rotate-[5.98deg]">
             <div className="h-[404.39px] pointer-events-none relative rounded-[5.54px] w-[423.442px]" data-name="WIP">
               <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-[5.54px]">
-                <img alt="" className="absolute max-w-none object-cover object-left-top rounded-[5.54px] size-full" src={imgWip1} />
+                <img alt="" fetchPriority="high" decoding="async" className="absolute max-w-none object-cover object-left-top rounded-[5.54px] size-full" src={imgWip1} />
               </div>
               <div aria-hidden="true" className="absolute border-[#ededed] border-[1.081px] border-solid inset-0 rounded-[5.54px] shadow-[0px_124.345px_34.6px_0px_rgba(26,58,84,0),0px_80.013px_31.356px_0px_rgba(26,58,84,0.01),0px_44.332px_27.031px_0px_rgba(26,58,84,0.05),0px_19.463px_19.463px_0px_rgba(26,58,84,0.09),0px_5.406px_10.813px_0px_rgba(26,58,84,0.1)]" />
             </div>
@@ -350,7 +350,7 @@ export default function LandingPage() {
         </div>
         <div className="-translate-x-1/2 absolute h-[515.841px] left-[calc(50%+0.4px)] pointer-events-none rounded-[7.54px] top-[25px] w-[794.248px]" data-name="WIP">
           <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-[7.54px]">
-            <img alt="" className="absolute max-w-none object-cover object-left-top rounded-[7.54px] size-full" src={imgWip2} />
+            <img alt="" fetchPriority="high" decoding="async" className="absolute max-w-none object-cover object-left-top rounded-[7.54px] size-full" src={imgWip2} />
           </div>
           <div aria-hidden="true" className="absolute border-[#ededed] border-[1.379px] border-solid inset-0 rounded-[7.54px] shadow-[0px_300px_84px_0px_rgba(26,58,84,0),0px_192px_77px_0px_rgba(26,58,84,0.01),0px_108px_65px_0px_rgba(26,58,84,0.04),0px_48px_48px_0px_rgba(26,58,84,0.07),0px_12px_26px_0px_rgba(26,58,84,0.08)]" />
         </div>
@@ -410,7 +410,7 @@ export default function LandingPage() {
         id="landing-features"
         className="absolute left-[calc(50%+12.5px)] top-[1518px] z-10 flex w-[1187px] -translate-x-1/2 flex-wrap content-start items-start gap-[12px] scroll-mt-28"
       >
-        <div className="content-stretch flex flex-col gap-[10px] h-[564px] items-center overflow-clip p-[48px] relative rounded-[36px] shadow-[0px_39px_11px_0px_rgba(181,181,181,0),0px_25px_10px_0px_rgba(181,181,181,0.04),0px_14px_8px_0px_rgba(181,181,181,0.12),0px_6px_6px_0px_rgba(181,181,181,0.2),0px_2px_3px_0px_rgba(181,181,181,0.24)] shrink-0 w-[700px]" style={{ backgroundImage: "linear-gradient(rgba(178, 230, 247, 0.48) 0%, rgba(253, 251, 247, 0.48) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}>
+        <div className="content-stretch flex flex-col gap-[10px] h-[564px] items-center overflow-clip p-[48px] relative rounded-[36px] shadow-[0px_39px_11px_0px_rgba(181,181,181,0),0px_25px_10px_0px_rgba(181,181,181,0.04),0px_14px_8px_0px_rgba(181,181,181,0.12),0px_6px_6px_0px_rgba(181,181,181,0.2),0px_2px_3px_0px_rgba(181,181,181,0.24)] shrink-0 w-[700px]" style={{ backgroundImage: "linear-gradient(rgba(178, 230, 247, 0.48) 0%, rgba(253, 251, 247, 0.48) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)", contain: "content" }}>
           <div className="-translate-x-1/2 absolute left-1/2 size-[700px] top-[40px]">
             <div className="absolute inset-[-52%]">
               <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1428 1428">
@@ -441,7 +441,7 @@ export default function LandingPage() {
           </div>
           <div className="absolute h-[268.501px] left-1/2 -translate-x-1/2 top-[262px] w-[750px]">
             <div className="absolute flex flex-col gap-[8px] left-1/2 -translate-x-1/2 top-[94px] w-[750px] overflow-hidden">
-              <div className="flex w-max gap-[8px]" style={{ animation: "marquee-left 30s linear infinite" }}>
+              <div className="flex w-max gap-[8px] marquee-container" style={{ animation: "marquee-left 30s linear infinite" }}>
                 {[...Array(2)].map((_, i) => (
                   <div key={i} className="flex gap-[8px] shrink-0">
                     <BackgroundImageAndText text="Create interactive prototypes" />
@@ -455,7 +455,7 @@ export default function LandingPage() {
                   </div>
                 ))}
               </div>
-              <div className="flex w-max gap-[8px]" style={{ animation: "marquee-right 30s linear infinite" }}>
+              <div className="flex w-max gap-[8px] marquee-container" style={{ animation: "marquee-right 30s linear infinite" }}>
                 {[...Array(2)].map((_, i) => (
                   <div key={i} className="flex gap-[8px] shrink-0">
                     <BackgroundImageAndText text="Implement accessibility standards" />
