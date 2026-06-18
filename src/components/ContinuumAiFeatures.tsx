@@ -88,9 +88,8 @@ export default function ContinuumAiFeatures({ variant, className }: ContinuumAiF
 
   return (
     <section
-      aria-labelledby="continuum-ai-heading"
+      aria-label="Continuum AI features"
       className={clsx(
-        /* Desktop: no opaque bg so the squiggly line can show through; page bg is already #f9fafb */
         isMobile && "bg-[#f9fafb]",
         isMobile
           ? "relative flex w-full shrink-0 flex-col gap-[64px]"
@@ -98,42 +97,8 @@ export default function ContinuumAiFeatures({ variant, className }: ContinuumAiF
         className,
       )}
       data-name="Continuum AI features"
-      id={isMobile ? undefined : "landing-continuum-ai"}
     >
-      <div className={clsx("flex w-full flex-col items-start", isMobile ? "gap-[20px]" : "")}>
-        <div className="flex w-full max-w-[768px] flex-col items-start gap-[20px]">
-          <div className="flex w-full flex-col items-start gap-[12px] font-['Satoshi:Medium',sans-serif] not-italic">
-            <p
-              className="w-full bg-clip-text text-[16px] leading-[24px] text-transparent"
-              style={{
-                backgroundImage:
-                  "linear-gradient(169.20773662156353deg, rgb(36, 181, 248) 4.6217%, rgb(85, 33, 254) 148.53%)",
-              }}
-            >
-              Features
-            </p>
-            <h2
-              className={clsx(
-                "font-continuum-ai-wordmark w-full tracking-[-0.72px] text-[#101828]",
-                isMobile ? "text-[28px] leading-[36px]" : "text-[36px] leading-[44px]",
-              )}
-              id="continuum-ai-heading"
-            >
-              Continuum AI
-            </h2>
-          </div>
-          <p
-            className={clsx(
-              "w-full font-['Satoshi:Regular',sans-serif] text-[#667085]",
-              isMobile ? "text-[16px] leading-[24px]" : "text-[20px] leading-[30px]",
-            )}
-          >
-            Quiet intelligence that handles the administrative heavy lifting, so you can focus on shipping.
-          </p>
-        </div>
-      </div>
-
-      <div className={clsx("flex w-full flex-col items-start", isMobile ? "" : "gap-[64px]")}>
+      <div className={clsx("flex w-full flex-col items-center", isMobile ? "" : "max-w-[1164px] gap-[64px]")}>
         {isMobile ? (
           <div className="flex w-full flex-col gap-[40px]">
             {ALL_FEATURES.map((f) => (

@@ -7,6 +7,11 @@ import { scrollToWaitlist } from "@/lib/scrollToWaitlist";
 import svgPaths from "./landing-svg";
 import { useInvoiceCarousel, InvoiceCardStrip } from "@/components/InvoiceCardCarousel";
 import ContinuumAiFeatures from "@/components/ContinuumAiFeatures";
+import AccessControlSection from "@/components/AccessControlSection";
+import ContinuumAiHero from "@/components/ContinuumAiHero";
+import SecuritySection from "@/components/SecuritySection";
+import MigrationSection from "@/components/MigrationSection";
+import FaqSection from "@/components/FaqSection";
 
 function LandingWaitlistForm() {
   const [email, setEmail] = useState("");
@@ -286,7 +291,7 @@ export default function LandingPage() {
 
   return (
     <div
-      className="relative min-h-[3700px] w-full overflow-x-hidden bg-[#f9fafb]"
+      className="relative w-full overflow-x-hidden bg-[#f9fafb]"
       data-name="Landing page"
     >
       <div className="-translate-x-1/2 absolute h-[627.236px] left-[calc(50%-0.27px)] top-[471px] w-[1679.176px]">
@@ -386,18 +391,6 @@ export default function LandingPage() {
         </div>
       </div>
       <div className="-translate-x-1/2 absolute bg-[#f9fafb] h-[1378px] left-1/2 top-[1458px] w-[1512px]" />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-[2248px] z-0 h-[378.896px] w-[1823.234px] -translate-x-1/2"
-      >
-        <div className="absolute inset-[-3.17%_0_-3.17%_-0.66%]">
-          <img
-            alt=""
-            className="block size-full object-fill"
-            src="/landing/vector-12.svg"
-          />
-        </div>
-      </div>
       <div
         id="landing-waitlist"
         className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[16px] items-center left-1/2 top-[1148px] w-[776px] scroll-mt-28"
@@ -870,10 +863,6 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-      <ContinuumAiFeatures
-        variant="desktop"
-        className="absolute left-1/2 top-[2630px] z-10 w-[1187px] -translate-x-1/2 scroll-mt-28"
-      />
       <div className="absolute left-[calc(50%+0.5px)] top-[28px] z-50 flex -translate-x-1/2 content-stretch items-center justify-center gap-[314px]">
         <div className="content-stretch flex flex-col items-center relative shrink-0">
           <p className="font-continuum leading-[24px] not-italic relative shrink-0 text-[#0b191f] text-[21.405px] text-center tracking-[-0.4281px] whitespace-nowrap">Continuum</p>
@@ -899,16 +888,33 @@ export default function LandingPage() {
           <ComponentBackgroundImageAndText1 text="Join Waitlist" />
         </div>
       </div>
-      <div className="absolute bottom-[48px] left-1/2 z-40 flex w-full max-w-[1512px] -translate-x-1/2 flex-col items-center justify-center gap-6 px-4 sm:px-8 md:flex-row md:items-center md:justify-between md:px-[137px]">
-        <div
-          id="landing-footer"
-          className="content-stretch flex min-w-0 flex-col items-center not-italic text-center whitespace-nowrap scroll-mt-28"
-        >
-          <p className="font-continuum leading-[47.662px] relative shrink-0 text-[#0b191f] text-[42.509px] tracking-[-0.8502px]">Continuum</p>
-          <p className="font-['Sathu:Regular',sans-serif] leading-[normal] opacity-80 relative shrink-0 text-[#252014] text-[15.458px] tracking-[-0.1546px]">Time track with one click.</p>
-        </div>
-        <div className="shrink-0">
-          <ComponentBackgroundImageAndText1 text="Join Waitlist" />
+      {/* Spacer reserving the absolutely-positioned hero region above, so the
+          sections below flow naturally beneath the hero, waitlist and feature cards. */}
+      <div aria-hidden className="w-full" style={{ height: 2540 }} />
+      <div className="relative z-10 flex w-full flex-col items-center">
+        <AccessControlSection
+          variant="desktop"
+          className="mx-auto w-[1512px] scroll-mt-28"
+        />
+        <ContinuumAiHero variant="desktop" className="mx-auto w-[1512px]" />
+        <ContinuumAiFeatures
+          variant="desktop"
+          className="mx-auto w-[1512px] scroll-mt-28"
+        />
+        <SecuritySection variant="desktop" className="mx-auto w-[1512px]" />
+        <MigrationSection variant="desktop" className="mx-auto w-[1512px]" />
+        <FaqSection variant="desktop" className="mx-auto w-[1512px] scroll-mt-28" />
+        <div className="mt-[64px] flex w-full max-w-[1512px] flex-col items-center justify-center gap-6 px-4 pb-[48px] sm:px-8 md:flex-row md:items-center md:justify-between md:px-[137px]">
+          <div
+            id="landing-footer"
+            className="content-stretch flex min-w-0 flex-col items-center not-italic text-center whitespace-nowrap scroll-mt-28"
+          >
+            <p className="font-continuum leading-[47.662px] relative shrink-0 text-[#0b191f] text-[42.509px] tracking-[-0.8502px]">Continuum</p>
+            <p className="font-['Sathu:Regular',sans-serif] leading-[normal] opacity-80 relative shrink-0 text-[#252014] text-[15.458px] tracking-[-0.1546px]">Time track with one click.</p>
+          </div>
+          <div className="shrink-0">
+            <ComponentBackgroundImageAndText1 text="Join Waitlist" />
+          </div>
         </div>
       </div>
     </div>

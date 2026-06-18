@@ -2,6 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import svgPaths from "./landing-mobile-svg";
 import { useInvoiceCarousel, InvoiceCardStrip } from "@/components/InvoiceCardCarousel";
 import ContinuumAiFeatures from "@/components/ContinuumAiFeatures";
+import AccessControlSection from "@/components/AccessControlSection";
+import ContinuumAiHero from "@/components/ContinuumAiHero";
+import SecuritySection from "@/components/SecuritySection";
+import MigrationSection from "@/components/MigrationSection";
+import FaqSection from "@/components/FaqSection";
 import { toast } from "sonner";
 import { postWaitlistSignup } from "@/api/waitlist";
 import { playWaitlistSuccessSound } from "@/lib/playWaitlistSuccessSound";
@@ -1158,7 +1163,12 @@ function Frame154() {
       <Frame121 />
       <Frame119 />
       <Frame120 />
+      <AccessControlSection variant="mobile" />
+      <ContinuumAiHero variant="mobile" />
       <ContinuumAiFeatures variant="mobile" />
+      <SecuritySection variant="mobile" />
+      <MigrationSection variant="mobile" />
+      <FaqSection variant="mobile" />
       <Frame4 />
     </div>
   );
