@@ -70,9 +70,12 @@ const STEPS: { title: string; body: string; art: React.ReactNode }[] = [
   { title: "Run", body: "First sprint live. Same structure, better visibility.", art: <RunArt /> },
 ];
 
+const CARD_SHADOW =
+  "shadow-[0px_39px_5.5px_0px_rgba(181,181,181,0),0px_25px_5px_0px_rgba(181,181,181,0.04),0px_14px_4px_0px_rgba(181,181,181,0.12),0px_6px_3px_0px_rgba(181,181,181,0.2),0px_2px_1.5px_0px_rgba(181,181,181,0.24)]";
+
 function StepCard({ title, body, art }: (typeof STEPS)[number]) {
   return (
-    <div className="flex flex-1 flex-col items-center justify-between gap-[20px] rounded-[8px] bg-white p-[20px]">
+    <div className={clsx("flex flex-1 flex-col items-center justify-between gap-[20px] rounded-[8px] bg-white p-[20px]", CARD_SHADOW)}>
       <div className="flex min-h-[100px] flex-1 items-center justify-center">{art}</div>
       <div className="flex w-full flex-col items-center gap-[8px] text-center">
         <p className="font-['Satoshi:Medium',sans-serif] text-[20px] leading-[30px] text-[#0b191f]">{title}</p>
@@ -121,7 +124,7 @@ export default function MigrationSection({ variant, className }: MigrationSectio
 
         <div
           className={clsx(
-            "flex w-full gap-[16px] rounded-[8px] shadow-[0px_39px_5.5px_0px_rgba(181,181,181,0),0px_25px_5px_0px_rgba(181,181,181,0.04),0px_14px_4px_0px_rgba(181,181,181,0.12),0px_6px_3px_0px_rgba(181,181,181,0.2),0px_2px_1.5px_0px_rgba(181,181,181,0.24)]",
+            "flex w-full gap-[16px]",
             isMobile ? "flex-col" : "items-stretch",
           )}
         >

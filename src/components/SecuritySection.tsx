@@ -26,9 +26,12 @@ const CARDS: { icon: string; title: string; body: string }[] = [
   },
 ];
 
+const CARD_SHADOW =
+  "shadow-[0px_39px_5.5px_0px_rgba(181,181,181,0),0px_25px_5px_0px_rgba(181,181,181,0.04),0px_14px_4px_0px_rgba(181,181,181,0.12),0px_6px_3px_0px_rgba(181,181,181,0.2),0px_2px_1.5px_0px_rgba(181,181,181,0.24)]";
+
 function Card({ icon, title, body }: (typeof CARDS)[number]) {
   return (
-    <div className="flex flex-col items-start gap-[20px] rounded-[8px] bg-white p-[20px]">
+    <div className={clsx("flex flex-col items-start gap-[20px] rounded-[8px] bg-white p-[20px]", CARD_SHADOW)}>
       <div className="relative size-[48px] shrink-0 rounded-[24px] bg-[#cfecff]">
         <div className="absolute left-[12px] top-[12px] size-[24px] overflow-clip">
           <img alt="" className="block size-full max-w-none" src={icon} />
@@ -81,7 +84,7 @@ export default function SecuritySection({ variant, className }: SecuritySectionP
 
         <div
           className={clsx(
-            "grid w-full gap-[16px] rounded-[8px] shadow-[0px_39px_5.5px_0px_rgba(181,181,181,0),0px_25px_5px_0px_rgba(181,181,181,0.04),0px_14px_4px_0px_rgba(181,181,181,0.12),0px_6px_3px_0px_rgba(181,181,181,0.2),0px_2px_1.5px_0px_rgba(181,181,181,0.24)]",
+            "grid w-full gap-[16px]",
             isMobile ? "grid-cols-1" : "grid-cols-2",
           )}
         >

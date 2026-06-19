@@ -896,7 +896,8 @@ export default function LandingPage() {
           variant="desktop"
           className="mx-auto w-[1512px] scroll-mt-28"
         />
-        <ContinuumAiHero variant="desktop" className="mx-auto w-[1512px]" />
+        {/* Full-bleed so the hands reach the screen edges instead of being hard-cut at 1512px */}
+        <ContinuumAiHero variant="desktop" className="w-full" />
         <ContinuumAiFeatures
           variant="desktop"
           className="mx-auto w-[1512px] scroll-mt-28"

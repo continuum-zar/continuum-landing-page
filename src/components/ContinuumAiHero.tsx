@@ -34,13 +34,17 @@ function DesktopHands() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none absolute left-1/2 top-0 h-[949px] w-[1512px] -translate-x-1/2"
+      className="pointer-events-none absolute left-1/2 top-0 h-[1460px] w-[1512px] -translate-x-1/2"
     >
-      {/* Human hand — reaches up from the lower left */}
-      <div className="absolute left-[-110px] top-[314px] flex h-[856.456px] w-[927.704px] items-center justify-center">
+      {/* Human hand — full image, padded so the rotated box edges do not slice finger/arm */}
+      <div className="absolute left-[-336px] top-[314px] flex h-[1139px] w-[1379px] items-center justify-center">
         <div className="flex-none rotate-[75deg]">
-          <div className="h-[778.761px] w-[678px] overflow-hidden">
-            <img alt="" className="block size-full object-cover" src={HAND_HUMAN} />
+          <div className="box-content w-[678px] overflow-visible p-[90px]">
+            <img
+              alt=""
+              className="block h-[1017px] w-[678px] max-w-none"
+              src={HAND_HUMAN}
+            />
           </div>
         </div>
       </div>
@@ -52,8 +56,6 @@ function DesktopHands() {
           </div>
         </div>
       </div>
-      {/* Bottom fades that feather the hands into the page background */}
-      <div className="absolute inset-x-0 bottom-0 h-[180px] bg-gradient-to-b from-[rgba(249,250,251,0)] to-[#f9fafb]" />
     </div>
   );
 }
@@ -61,11 +63,11 @@ function DesktopHands() {
 /** Mobile hands scene — scaled composition with the two hands meeting near center. */
 function MobileHands() {
   return (
-    <div aria-hidden className="pointer-events-none relative h-[260px] w-full overflow-hidden">
-      <div className="absolute left-[-70px] top-[70px] flex h-[300px] w-[320px] items-center justify-center">
+    <div aria-hidden className="pointer-events-none relative h-[380px] w-full overflow-hidden">
+      <div className="absolute left-[-70px] top-[20px] flex h-[370px] w-[470px] items-center justify-center">
         <div className="flex-none rotate-[75deg]">
-          <div className="h-[270px] w-[235px] overflow-hidden">
-            <img alt="" className="block size-full object-cover" src={HAND_HUMAN} />
+          <div className="box-content w-[235px] overflow-visible p-[20px]">
+            <img alt="" className="block h-[352px] w-[235px] max-w-none" src={HAND_HUMAN} />
           </div>
         </div>
       </div>
@@ -76,7 +78,6 @@ function MobileHands() {
           </div>
         </div>
       </div>
-      <div className="absolute inset-x-0 bottom-0 h-[80px] bg-gradient-to-b from-[rgba(249,250,251,0)] to-[#f9fafb]" />
     </div>
   );
 }
@@ -95,10 +96,10 @@ export default function ContinuumAiHero({ variant, className }: ContinuumAiHeroP
       aria-labelledby="continuum-ai-heading"
       data-name="Continuum AI hero"
       className={clsx(
-        "relative w-full overflow-hidden",
+        "relative w-full overflow-x-hidden",
         isMobile
           ? "flex flex-col items-center gap-[24px] py-[24px]"
-          : "h-[820px] py-[96px]",
+          : "h-[1460px] py-[96px]",
         className,
       )}
     >
