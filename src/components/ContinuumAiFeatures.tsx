@@ -93,7 +93,7 @@ export default function ContinuumAiFeatures({ variant, className }: ContinuumAiF
         isMobile && "bg-[#f9fafb]",
         isMobile
           ? "relative flex w-full shrink-0 flex-col gap-[64px]"
-          : "flex flex-col items-center gap-[64px] px-[32px] py-[96px]",
+          : "relative z-10 -mt-[120px] flex flex-col items-center gap-[64px] px-[32px] pt-[32px] pb-[96px]",
         className,
       )}
       data-name="Continuum AI features"

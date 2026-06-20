@@ -38,6 +38,44 @@ body {
   will-change: transform;
 }
 
+/* ── Migration section: looped illustration animations ──────────────── */
+/* Connect: pills breathe in a staggered wave (delay set inline per pill). */
+@keyframes migration-pill-pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.09); }
+}
+/* Map: green columns repeatedly grow up from the baseline — the "mapping". */
+@keyframes migration-col-grow {
+  0%       { transform: scaleY(0.15); opacity: 0.45; }
+  40%      { transform: scaleY(1);    opacity: 1; }
+  75%      { transform: scaleY(1);    opacity: 1; }
+  100%     { transform: scaleY(0.15); opacity: 0.45; }
+}
+/* Map: arrow nudges right, hinting flow from old → new. */
+@keyframes migration-arrow-nudge {
+  0%, 100% { transform: translateX(0);   opacity: 0.55; }
+  50%      { transform: translateX(3px); opacity: 1; }
+}
+/* Run: kanban cards cycle in like work flowing through the board. */
+@keyframes migration-card-cycle {
+  0%       { opacity: 0; transform: translateY(-3px); }
+  15%      { opacity: 1; transform: translateY(0); }
+  80%      { opacity: 1; transform: translateY(0); }
+  100%     { opacity: 0; transform: translateY(-3px); }
+}
+
+.anim-pill-pulse  { animation: migration-pill-pulse 2s ease-in-out infinite; }
+.anim-col-grow    { transform-origin: bottom; animation: migration-col-grow 2.6s ease-in-out infinite; }
+.anim-arrow-nudge { animation: migration-arrow-nudge 1.6s ease-in-out infinite; }
+.anim-card-cycle  { animation: migration-card-cycle 2.6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-pill-pulse,
+  .anim-col-grow,
+  .anim-arrow-nudge,
+  .anim-card-cycle { animation: none; }
+}
+
 /* Sonner (waitlist / errors): Satoshi + success icon like continuum-MVP login toast */
 [data-sonner-toaster] [data-sonner-toast] {
   font-family: 'Satoshi', system-ui, sans-serif;

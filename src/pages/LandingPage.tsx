@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { postWaitlistSignup } from "@/api/waitlist";
 import { playWaitlistSuccessSound } from "@/lib/playWaitlistSuccessSound";
 import { scrollToWaitlist } from "@/lib/scrollToWaitlist";
+import { PrimaryButton } from "@/components/PrimaryButton";
 import svgPaths from "./landing-svg";
 import { useInvoiceCarousel, InvoiceCardStrip } from "@/components/InvoiceCardCarousel";
 import ContinuumAiFeatures from "@/components/ContinuumAiFeatures";
@@ -59,25 +60,10 @@ function LandingWaitlistForm() {
             />
           </label>
         </div>
-        <div className="content-stretch flex gap-[8px] h-[40px] items-center relative shrink-0">
-          <button
-            type="submit"
-            disabled={status === "loading"}
-            className="h-full relative rounded-[8px] shrink-0 bg-[#24b5f8] hover:bg-[#297ccb] transition-colors disabled:opacity-70 cursor-pointer disabled:cursor-not-allowed border-0"
-            data-name="Component 7"
-          >
-            <div
-              aria-hidden="true"
-              className="absolute border border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[0px_12px_3px_0px_rgba(45,154,249,0),0px_8px_3px_0px_rgba(45,154,249,0.03),0px_4px_3px_0px_rgba(45,154,249,0.11),0px_2px_2px_0px_rgba(45,154,249,0.19),0px_0px_1px_0px_rgba(45,154,249,0.21)]"
-            />
-            <div className="flex flex-row items-center justify-center size-full">
-              <div className="content-stretch flex gap-[6px] h-full items-center justify-center px-[16px] py-[8px] relative">
-                <span className="font-['Satoshi:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[14px] text-white whitespace-nowrap">
-                  {status === "loading" ? "Sending…" : "Join Waitlist"}
-                </span>
-              </div>
-            </div>
-          </button>
+        <div className="content-stretch flex h-[40px] items-center relative shrink-0">
+          <PrimaryButton type="submit" size="md" disabled={status === "loading"}>
+            {status === "loading" ? "Sending…" : "Join Waitlist"}
+          </PrimaryButton>
         </div>
       </div>
     </form>
@@ -151,14 +137,9 @@ type ComponentBackgroundImageAndText1Props = {
 
 function ComponentBackgroundImageAndText1({ text }: ComponentBackgroundImageAndText1Props) {
   return (
-    <button
-      type="button"
-      onClick={scrollToWaitlist}
-      className="cursor-pointer border-0 content-stretch flex gap-[6px] h-[32px] items-center justify-center px-[16px] py-[8px] relative rounded-[8px] shrink-0 bg-[#24b5f8] hover:bg-[#297ccb] transition-colors"
-    >
-      <div aria-hidden="true" className="absolute border border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[0px_12px_3px_0px_rgba(45,154,249,0),0px_8px_3px_0px_rgba(45,154,249,0.03),0px_4px_3px_0px_rgba(45,154,249,0.11),0px_2px_2px_0px_rgba(45,154,249,0.19),0px_0px_1px_0px_rgba(45,154,249,0.21)]" />
-      <p className="font-['Satoshi:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[14px] text-white whitespace-nowrap">{text}</p>
-    </button>
+    <PrimaryButton type="button" onClick={scrollToWaitlist}>
+      {text}
+    </PrimaryButton>
   );
 }
 type Frame379BackgroundImageProps = {

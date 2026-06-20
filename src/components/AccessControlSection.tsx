@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import SectionHeader from "@/components/SectionHeader";
+import { PrimaryButton } from "@/components/PrimaryButton";
 import {
   ArrowLeftIcon,
   CalendarIcon,
@@ -35,8 +36,8 @@ const ROLES: { title: string; body: string }[] = [
     body: "Works in assigned sprints, logs time, moves tasks. Sees only what's relevant to their work.",
   },
   {
-    title: "Repository AI Indexing",
-    body: "Read-only. Milestones and delivery status a polished view, never the raw sprint board.",
+    title: "Continuum AI",
+    body: "Read-only by default. Handles planning, task drafting, and status updates in the background, enough context to help, without changing what's on the sprint board.",
   },
 ];
 
@@ -94,12 +95,9 @@ function ShareProjectCard({ variant }: { variant: "desktop" | "mobile" }) {
             <span className="font-['Satoshi:Medium',sans-serif] text-[16px] text-[#0b191f]">Developer</span>
             <ChevronDownIcon className="shrink-0 text-[#252014]" size={16} />
           </div>
-          <button
-            type="button"
-            className="shrink-0 rounded-[8px] bg-[#24b5f8] px-[16px] py-[10px] font-['Satoshi:Bold',sans-serif] text-[14px] text-white transition-colors hover:bg-[#297ccb]"
-          >
+          <PrimaryButton type="button" className="py-[10px]" containerClassName="shrink-0">
             Invite
-          </button>
+          </PrimaryButton>
         </div>
 
         {/* Who has access */}
