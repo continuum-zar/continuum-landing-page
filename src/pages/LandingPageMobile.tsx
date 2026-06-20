@@ -2,10 +2,16 @@ import React, { useState, useRef, useEffect } from "react";
 import svgPaths from "./landing-mobile-svg";
 import { useInvoiceCarousel, InvoiceCardStrip } from "@/components/InvoiceCardCarousel";
 import ContinuumAiFeatures from "@/components/ContinuumAiFeatures";
+import AccessControlSection from "@/components/AccessControlSection";
+import ContinuumAiHero from "@/components/ContinuumAiHero";
+import SecuritySection from "@/components/SecuritySection";
+import MigrationSection from "@/components/MigrationSection";
+import FaqSection from "@/components/FaqSection";
 import { toast } from "sonner";
 import { postWaitlistSignup } from "@/api/waitlist";
 import { playWaitlistSuccessSound } from "@/lib/playWaitlistSuccessSound";
 import { scrollToWaitlist } from "@/lib/scrollToWaitlist";
+import { PrimaryButton } from "@/components/PrimaryButton";
 
 /** Hero panel images under `public/landing/`. */
 const imgWip = "/landing/hero-wip-left.webp";
@@ -58,29 +64,10 @@ function MobileWaitlistForm() {
             />
           </label>
         </div>
-        <div className="content-stretch flex gap-[8px] h-[40px] items-center relative shrink-0">
-          <button
-            type="submit"
-            disabled={status === "loading"}
-            className="h-full relative rounded-[8px] shrink-0 border-0 cursor-pointer bg-[#24b5f8] hover:bg-[#297ccb] transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
-            data-name="Component 7"
-            style={{
-              backgroundImage:
-                "linear-gradient(164.237deg, rgb(36, 181, 248) 123.02%, rgb(85, 33, 254) 802.55%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)",
-            }}
-          >
-            <div
-              aria-hidden="true"
-              className="absolute border border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[0px_12px_3px_0px_rgba(45,154,249,0),0px_8px_3px_0px_rgba(45,154,249,0.03),0px_4px_3px_0px_rgba(45,154,249,0.11),0px_2px_2px_0px_rgba(45,154,249,0.19),0px_0px_1px_0px_rgba(45,154,249,0.21)]"
-            />
-            <div className="flex flex-row items-center justify-center size-full">
-              <div className="content-stretch flex gap-[6px] h-full items-center justify-center px-[16px] py-[8px] relative">
-                <span className="font-['Satoshi:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[14px] text-white whitespace-nowrap">
-                  {status === "loading" ? "Sending…" : "Join Waitlist"}
-                </span>
-              </div>
-            </div>
-          </button>
+        <div className="content-stretch flex h-[40px] items-center relative shrink-0">
+          <PrimaryButton type="submit" size="md" disabled={status === "loading"}>
+            {status === "loading" ? "Sending…" : "Join Waitlist"}
+          </PrimaryButton>
         </div>
       </div>
     </form>
@@ -140,16 +127,9 @@ function Frame116() {
 
 function Component2() {
   return (
-    <button
-      type="button"
-      onClick={scrollToWaitlist}
-      className="content-stretch flex cursor-pointer gap-[6px] h-[32px] items-center justify-center border-0 px-[16px] py-[8px] relative rounded-[8px] shrink-0"
-      data-name="Component 7"
-      style={{ backgroundImage: "linear-gradient(167.275deg, rgb(36, 181, 248) 123.02%, rgb(85, 33, 254) 802.55%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}
-    >
-      <div aria-hidden="true" className="absolute border border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[0px_12px_3px_0px_rgba(45,154,249,0),0px_8px_3px_0px_rgba(45,154,249,0.03),0px_4px_3px_0px_rgba(45,154,249,0.11),0px_2px_2px_0px_rgba(45,154,249,0.19),0px_0px_1px_0px_rgba(45,154,249,0.21)]" />
-      <p className="font-['Satoshi:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[14px] text-white whitespace-nowrap">Join Waitlist</p>
-    </button>
+    <PrimaryButton type="button" onClick={scrollToWaitlist} data-name="Component 7">
+      Join Waitlist
+    </PrimaryButton>
   );
 }
 
@@ -171,7 +151,7 @@ function Frame3() {
 
 function Frame127() {
   return (
-    <div className="-translate-x-1/2 absolute content-stretch flex gap-[314px] items-center justify-end left-[calc(50%-2px)] top-[28px] w-[374px]">
+    <div className="-translate-x-1/2 absolute content-stretch flex gap-[314px] items-center justify-end left-1/2 top-[28px] w-[374px] max-w-[calc(100%-32px)]">
       <Frame25 />
       <Frame3 />
     </div>
@@ -180,16 +160,9 @@ function Frame127() {
 
 function Component5() {
   return (
-    <button
-      type="button"
-      onClick={scrollToWaitlist}
-      className="content-stretch flex cursor-pointer gap-[6px] h-[32px] items-center justify-center border-0 px-[16px] py-[8px] relative rounded-[8px] shrink-0"
-      data-name="Component 7"
-      style={{ backgroundImage: "linear-gradient(167.275deg, rgb(36, 181, 248) 123.02%, rgb(85, 33, 254) 802.55%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}
-    >
-      <div aria-hidden="true" className="absolute border border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none rounded-[8px] shadow-[0px_12px_3px_0px_rgba(45,154,249,0),0px_8px_3px_0px_rgba(45,154,249,0.03),0px_4px_3px_0px_rgba(45,154,249,0.11),0px_2px_2px_0px_rgba(45,154,249,0.19),0px_0px_1px_0px_rgba(45,154,249,0.21)]" />
-      <p className="font-['Satoshi:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[14px] text-white whitespace-nowrap">Join Waitlist</p>
-    </button>
+    <PrimaryButton type="button" onClick={scrollToWaitlist} data-name="Component 7">
+      Join Waitlist
+    </PrimaryButton>
   );
 }
 
@@ -227,7 +200,7 @@ function Frame115() {
   return (
     <div
       id="landing-waitlist"
-      className="absolute content-stretch flex flex-col gap-[16px] items-center left-[16px] scroll-mt-28 top-[548px] w-[370px]"
+      className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[16px] items-center left-1/2 scroll-mt-28 top-[548px] w-[370px] max-w-[calc(100%-32px)]"
     >
       <p className="font-['Satoshi:Medium',sans-serif] leading-[1.04] not-italic relative shrink-0 text-[#0b191f] text-[36px] text-center w-full">Join the Waitlist</p>
       <p className="font-['Satoshi:Medium',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#606d76] text-[14px] text-center w-full">We’re building a unified space for sprint planning, frictionless time tracking, and instant invoicing-but we need your help to perfect it. Join our exclusive Beta program to get early access, test our core features, and tell us exactly what your team needs to do its best deep work.</p>
@@ -1158,7 +1131,12 @@ function Frame154() {
       <Frame121 />
       <Frame119 />
       <Frame120 />
+      <AccessControlSection variant="mobile" />
+      <ContinuumAiHero variant="mobile" />
       <ContinuumAiFeatures variant="mobile" />
+      <SecuritySection variant="mobile" />
+      <MigrationSection variant="mobile" />
+      <FaqSection variant="mobile" />
       <Frame4 />
     </div>
   );
