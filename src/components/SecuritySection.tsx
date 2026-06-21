@@ -20,9 +20,9 @@ const CARDS: { icon: string; title: string; body: string }[] = [
     body: "Read-only. Milestones and delivery status” a polished view, never the raw sprint board.",
   },
   {
-    icon: `${ICON}/icon-bar-chart.svg`,
-    title: "Repository AI Indexing",
-    body: "Read-only. Milestones and delivery status” a polished view, never the raw sprint board.",
+    icon: `${ICON}/icon-shield-check.svg`,
+    title: "Encrypted by Default",
+    body: "Your credentials and sensitive data are encrypted and never stored in plain text, so what's private stays private.",
   },
 ];
 

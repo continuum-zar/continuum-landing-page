@@ -129,7 +129,7 @@ export default function FaqSection({ variant, className }: FaqSectionProps) {
 
         <div className="flex w-full flex-col gap-[24px]">
           {/* Category tabs */}
-          <div className={clsx("flex gap-[8px]", isMobile && "overflow-x-auto pb-1")}>
+          <div className={clsx("flex gap-[8px]", isMobile && "overflow-x-auto pb-1 scrollbar-hide")}>
             {TABS.map((tab, i) => {
               const active = i === activeTab;
               return (
@@ -141,8 +141,10 @@ export default function FaqSection({ variant, className }: FaqSectionProps) {
                     setOpenIndex(null);
                   }}
                   className={clsx(
-                    "flex h-[40px] shrink-0 items-center rounded-[8px] border-l-[2px] bg-[#edf0f3] px-[16px] py-[8px] font-['Satoshi:Medium',sans-serif] text-[14px] transition-colors",
-                    active ? "border-[#cfecff] text-[#043e59]" : "border-transparent text-[#606d76]",
+                    "flex h-[40px] shrink-0 items-center rounded-[8px] border-l-[2px] px-[16px] py-[8px] font-['Satoshi:Medium',sans-serif] text-[14px] transition-colors",
+                    active
+                      ? "border-[#24b5f8] bg-[#24b5f8] text-white"
+                      : "border-transparent bg-[#edf0f3] text-[#606d76]",
                   )}
                 >
                   {tab}

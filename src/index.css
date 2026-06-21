@@ -12,6 +12,27 @@ body {
   overflow-y: auto;
 }
 
+/* Clickable elements always show the pointer cursor (browsers default <button> to
+   an arrow). Disabled controls are excluded so they don't appear interactive. */
+button:not(:disabled),
+a[href],
+label[for],
+summary,
+[role="button"],
+[role="tab"],
+[role="link"] {
+  cursor: pointer;
+}
+
+/* Hide horizontal scrollbar (e.g. FAQ category tabs on mobile) while keeping scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE / old Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
 /* Brand wordmark: Sarina 400 everywhere "Continuum" appears */
 .font-continuum {
   font-family: 'Sarina', sans-serif;
