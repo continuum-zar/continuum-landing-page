@@ -4,17 +4,284 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Continuum | AI-Powered Project Management</title>
-    <meta name="description" content="Continuum cuts through the noise of dense project management. A unified space for sprint planning, frictionless time tracking, and instant invoicing." />
-    <meta property="og:title" content="Continuum" />
-    <meta property="og:description" content="Frictionless execution and tracking for project managers and teams." />
-    
+
+    <title>Continuum — AI-Powered Project Management, Time Tracking & Invoicing</title>
+    <meta
+      name="description"
+      content="Continuum is an AI-powered project management platform for teams: a unified space for sprint planning, frictionless time tracking, and instant invoicing. POPIA-compliant. Join the beta waitlist."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Continuum" />
+    <meta name="keywords" content="project management, sprint planning, time tracking, invoicing, RBAC, POPIA, agile, Jira migration, Trello migration, Asana migration" />
+    <meta name="theme-color" content="#24B5F8" />
+    <link rel="canonical" href="https://joincontinuum.co.za/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Continuum" />
+    <meta property="og:title" content="Continuum — AI-Powered Project Management, Time Tracking & Invoicing" />
+    <meta
+      property="og:description"
+      content="A unified space for sprint planning, frictionless time tracking, and instant invoicing. POPIA-compliant. Join the beta waitlist."
+    />
+    <meta property="og:url" content="https://joincontinuum.co.za/" />
+    <meta property="og:locale" content="en_ZA" />
+    <meta property="og:image" content="https://joincontinuum.co.za/landing/hero-wip-center.webp" />
+    <meta property="og:image:alt" content="Continuum project management dashboard showing sprint planning and time tracking" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Continuum — AI-Powered Project Management, Time Tracking & Invoicing" />
+    <meta
+      name="twitter:description"
+      content="A unified space for sprint planning, frictionless time tracking, and instant invoicing. POPIA-compliant. Join the beta waitlist."
+    />
+    <meta name="twitter:image" content="https://joincontinuum.co.za/landing/hero-wip-center.webp" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
     <link rel="preload" as="style" href="/src/index.css" />
+
+    <!-- Structured data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Continuum",
+      "url": "https://joincontinuum.co.za/",
+      "logo": "https://joincontinuum.co.za/favicon.svg",
+      "description": "AI-powered project management platform for sprint planning, time tracking, and invoicing. Built with South African POPIA compliance at its core.",
+      "email": "info@joincontinuum.co.za",
+      "areaServed": "ZA",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@joincontinuum.co.za",
+        "contactType": "customer support"
+      }
+    }
+    </script>
+
+    <!-- Structured data: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Continuum",
+      "url": "https://joincontinuum.co.za/",
+      "inLanguage": "en"
+    }
+    </script>
+
+    <!-- Structured data: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Continuum",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://joincontinuum.co.za/",
+      "description": "A unified project management workspace for sprint planning, frictionless time tracking, instant invoicing, role-based access control, and easy migration from Jira, Trello, and Asana.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "ZAR",
+        "description": "Private beta — join the waitlist for early access."
+      }
+    }
+    </script>
+
+    <!-- Structured data: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Continuum POPIA compliant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Continuum is built with South Africa's Protection of Personal Information Act (POPIA) in mind. Our Privacy Policy explains how we collect, use, and protect personal information, your rights under POPIA, and how to reach our Information Officer at info@joincontinuum.co.za. We apply appropriate technical and organisational safeguards, including encryption in transit, role-based access controls, and retention practices aligned with POPIA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who can see my team's sprint board?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only people you explicitly invite to a project can access its workspace. Sprint boards and Kanban views require project membership and the right permissions. Clients and view-only members get a separate, curated experience: milestones, progress summaries, and sanitized activity, not internal diagnostics like raw sprint boards, team hours, or health scores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I control what each team member sees and accesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Continuum uses role-based access control (RBAC) with packaged roles such as Admin, Project Manager, Developer, View Only, and Contractor. Admins can invite members, assign roles, and customise permission bundles per project, including fine-grained controls over sprint views, task editing, time logging, invoicing, and team visibility."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which project management tools can I import from?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can import from Jira (CSV export), Trello (JSON export), and Asana (CSV export). Continuum also accepts generic CSV files when your tool exports task data as a spreadsheet. The import wizard auto-detects the source format, or you can pick it manually for heavily customised exports."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can my team be running their first sprint?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most teams can have a first sprint live in under an hour. Create a project, invite members with the right roles, and either build your board from scratch or import an existing one from Jira, Trello, or Asana. Connecting GitHub is optional but unlocks commit tracking and code intelligence."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!--
+        Static, crawlable fallback content for search engines and AI answer engines.
+        React (createRoot) replaces this with the interactive app on mount, so users
+        always see the full experience while crawlers without JS get real content.
+      -->
+      <div id="seo-fallback" style="max-width:960px;margin:0 auto;padding:48px 24px;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#0b191f;line-height:1.6;">
+        <header>
+          <p style="font-size:20px;font-weight:700;background:linear-gradient(99deg,#24B5F8,#5521FE);-webkit-background-clip:text;background-clip:text;color:transparent;">Continuum</p>
+          <nav aria-label="Primary">
+            <a href="#features" style="margin-right:16px;color:#043e59;">Features</a>
+            <a href="#access-control" style="margin-right:16px;color:#043e59;">Access control</a>
+            <a href="#migration" style="margin-right:16px;color:#043e59;">Migration</a>
+            <a href="#security" style="margin-right:16px;color:#043e59;">Security</a>
+            <a href="#faq" style="margin-right:16px;color:#043e59;">FAQ</a>
+            <a href="#waitlist" style="color:#043e59;">Join waitlist</a>
+          </nav>
+        </header>
+
+        <main>
+          <h1 style="font-size:40px;line-height:1.1;margin:32px 0 16px;">Continuum cuts through the noise of dense project management</h1>
+          <p style="font-size:18px;color:#606d76;max-width:640px;">
+            Leave behind the dense, tangled complexity of legacy tools. Continuum is an
+            AI-powered project management platform that gives project managers and teams a
+            clear hierarchy and a frictionless way to execute — combining
+            <a href="#features" style="color:#24b5f8;">sprint planning, time tracking</a>, and
+            <a href="#features" style="color:#24b5f8;">instant invoicing</a> in one unified space.
+            <a href="#waitlist" style="color:#24b5f8;">Join the beta waitlist</a> for early access.
+          </p>
+
+          <section id="features">
+            <h2 style="font-size:28px;margin:40px 0 12px;">Frictionless execution &amp; recording</h2>
+            <p style="color:#606d76;">
+              Stop fighting your tools to track work. Team members simply click to start
+              recording time directly on a task — no separate timesheet app and no manual
+              reconciliation. With <strong>seamless invoicing</strong>, tracked time flows
+              straight into invoices, so there is no more chasing down timesheets or
+              reconciling data across disconnected systems.
+            </p>
+          </section>
+
+          <section id="access-control">
+            <h2 style="font-size:28px;margin:40px 0 12px;">Your clients see progress, not your process</h2>
+            <p style="color:#606d76;">
+              Continuum uses role-based access control with three core roles and no
+              configuration overhead. <strong>Admins</strong> get full control over projects,
+              billing, team, and audit logs. <strong>Members</strong> work in assigned
+              sprints, log time, and see only what is relevant to their work.
+              <strong>Continuum AI</strong> is read-only by default — handling planning, task
+              drafting, and status updates in the background without changing what is on the
+              sprint board. Clients receive a curated view of milestones and delivery status,
+              never the raw sprint board.
+            </p>
+          </section>
+
+          <section id="migration">
+            <h2 style="font-size:28px;margin:40px 0 12px;">Easy migration with no forced cutover</h2>
+            <p style="color:#606d76;">
+              Import your existing board from Jira, Trello, Asana, or a generic CSV — your
+              structure comes with it. Columns, labels, and assignees transfer automatically.
+              There is no forced cutover: your team can work in both tools until the switch is
+              done, and your first sprint can be live in under an hour.
+            </p>
+          </section>
+
+          <section id="security">
+            <h2 style="font-size:28px;margin:40px 0 12px;">Built for teams that can't afford to get security wrong</h2>
+            <p style="color:#606d76;">
+              POPIA compliance isn't a checkbox added after the fact — it's built into how
+              Continuum stores, logs, and manages your data. Continuum aligns with South
+              Africa's
+              <a href="https://www.gov.za/documents/protection-personal-information-act" rel="noopener" target="_blank" style="color:#24b5f8;">Protection of Personal Information Act (POPIA)</a>,
+              applying encryption in transit, role-based access controls, and POPIA-aligned
+              retention. Production data runs on managed cloud infrastructure (PostgreSQL and
+              application services deployed via
+              <a href="https://railway.app" rel="noopener" target="_blank" style="color:#24b5f8;">Railway</a>),
+              and sensitive credentials are stored encrypted or hashed, never in plaintext.
+            </p>
+          </section>
+
+          <section id="faq">
+            <h2 style="font-size:28px;margin:40px 0 12px;">Frequently asked questions</h2>
+
+            <h3 style="font-size:20px;margin:24px 0 8px;">Is Continuum POPIA compliant?</h3>
+            <p style="color:#606d76;">
+              Yes. Continuum is built with POPIA in mind. Our Privacy Policy explains how we
+              collect, use, and protect personal information, your rights under POPIA, and how
+              to reach our Information Officer at info@joincontinuum.co.za. We apply encryption
+              in transit, role-based access controls, and POPIA-aligned retention.
+            </p>
+
+            <h3 style="font-size:20px;margin:24px 0 8px;">Who can see my team's sprint board?</h3>
+            <p style="color:#606d76;">
+              Only people you explicitly invite to a project. Sprint boards and Kanban views
+              require project membership and the right permissions. Clients and view-only
+              members get a curated experience of milestones and progress, not internal
+              diagnostics like raw sprint boards or team hours.
+            </p>
+
+            <h3 style="font-size:20px;margin:24px 0 8px;">Which project management tools can I import from?</h3>
+            <p style="color:#606d76;">
+              Jira (CSV export), Trello (JSON export), Asana (CSV export), and generic CSV
+              files. The import wizard auto-detects the source format, or you can pick it
+              manually for heavily customised exports.
+            </p>
+
+            <h3 style="font-size:20px;margin:24px 0 8px;">How quickly can my team be running their first sprint?</h3>
+            <p style="color:#606d76;">
+              Most teams can have a first sprint live in under an hour — create a project,
+              invite members with the right roles, and build or import a board.
+            </p>
+          </section>
+
+          <section id="waitlist">
+            <h2 style="font-size:28px;margin:40px 0 12px;">Join the waitlist</h2>
+            <p style="color:#606d76;">
+              We're building a unified space for sprint planning, frictionless time tracking,
+              and instant invoicing — and we need your help to perfect it. Join our exclusive
+              beta program to get early access, test core features, and tell us exactly what
+              your team needs to do its best deep work.
+              <a href="#waitlist" style="color:#24b5f8;">Sign up for early access.</a>
+            </p>
+          </section>
+
+          <figure style="margin:32px 0;">
+            <img
+              src="/landing/hero-wip-center.webp"
+              alt="Continuum project management dashboard showing sprint planning, time tracking, and invoicing in one workspace"
+              width="794"
+              height="516"
+              style="max-width:100%;height:auto;border-radius:8px;"
+            />
+          </figure>
+        </main>
+
+        <footer style="margin-top:48px;padding-top:24px;border-top:1px solid #ebedee;color:#606d76;font-size:14px;">
+          <p>Continuum — AI-powered project management. Contact our Information Officer at info@joincontinuum.co.za.</p>
+        </footer>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
